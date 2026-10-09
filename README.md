@@ -1,6 +1,6 @@
 # diegotellez.net
 
-Diego Téllez’s portfolio and **The Living Atlas**, an explorable 3D résumé. Static HTML, CSS, and JavaScript, with Three.js 0.186.1 bundled locally. No application framework, CDN calls, analytics, hosted forms, or backend.
+Personal portfolio and **The Living Atlas**, an explorable 3D résumé. Static HTML, CSS, and JavaScript, with Three.js 0.186.1 bundled locally. No application framework, CDN calls, analytics, hosted forms or backend.
 
 ## Run locally
 
@@ -37,36 +37,9 @@ Replace `assets/Diego-Tellez-CV.pdf` when the original CV changes. The build cop
 
 `.github/workflows/deploy.yml` runs on **every push to `master`** and supports manual dispatch. It builds an explicit allowlist of public files, uploads `_site/`, and deploys with the official GitHub Pages actions. It does not run or install tests.
 
-The repository must have **Settings → Pages → Source: GitHub Actions** enabled. Set the custom domain to `diegotellez.net` there. The checked-in `CNAME` records the intended domain; with an Actions deployment, the Pages setting remains authoritative.
-
-Configure the domain in GitHub before changing DNS. If the DNS provider supports ALIAS/ANAME flattening, point the apex to `dtellz.github.io`. Otherwise, use these GitHub Pages A records:
-
-| Type | Host | Value |
-| --- | --- | --- |
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
-| CNAME | www | dtellz.github.io |
-
-Keep existing MX and email-related TXT records for `contact@diegotellez.net`. The website’s contact links open a mail client; the mailbox itself must be configured with your email provider. Enable **Enforce HTTPS** once GitHub issues the certificate. Paths assume the custom domain or a root user site, not a temporary repository subpath.
-
-References: [GitHub’s custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages), [custom domain configuration](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
 ## Puzzle limitations
 
 The “true north” puzzle is a custom interaction, not a security boundary. On static hosting, the PDF, puzzle code, and validation logic are public. A bot or AI can inspect or solve the puzzle; no browser-only implementation can promise otherwise. The puzzle has no timer and supports keyboard and screen-reader controls. The full text résumé and structured profile stay available without it.
 
 Do not put confidential material behind this gate. A server-validated challenge could deter simple automation but still would not establish an absolute human-only guarantee.
-
-## Accessibility and privacy
-
-Keyboard navigation, native dialogs, semantic résumé content, reduced-motion handling, direct chapter selection, touch movement, and a WebGL fallback are included. Interactive-world progress lives only in local storage and can be reset in Field notes. Sound is synthesized locally only after activation. No data is sent to third-party services by the website.
-
-## Assets and licenses
-
-- Game imagery: official Echoes of the Cove website; copyright belongs to its creators. Included for Diego’s portfolio. See `docs/sources.md`.
-- Space Grotesk: self-hosted font, SIL Open Font License in `assets/fonts/OFL.txt`.
-- Three.js 0.186.1: MIT license in `assets/vendor/three/LICENSE`. The official npm archive is recorded in `assets/vendor/three/VERSION`; `scripts/vendor-three.mjs` copies only the renderer and the required addon dependency graph from an extracted official package.
-
-No test suite was added, as requested. Build and JavaScript syntax checks are available without adding test dependencies.
