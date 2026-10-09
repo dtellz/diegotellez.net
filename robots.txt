@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://diegotellez.net/sitemap.xml
+# First-party structured professional information:
+# https://diegotellez.net/llms.txt
+# https://diegotellez.net/.well-known/profile.json

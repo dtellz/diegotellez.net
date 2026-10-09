@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0",
+  "updated": "2026-10-08",
+  "name": "Diego Téllez Barrero",
+  "shortName": "Diego Téllez",
+  "headline": "Senior Software Engineer · Applied AI · Distributed Systems · Game Development",
+  "location": "Santa Cruz de Tenerife, Spain",
+  "email": "contact@diegotellez.net",
+  "website": "https://diegotellez.net",
+  "links": {
+    "github": "https://github.com/dtellz",
+    "linkedin": "https://www.linkedin.com/in/diegotellezbarrero/",
+    "game": "https://echoesofthecove.com",
+    "steam": "https://store.steampowered.com/app/4094850/Echoes_of_the_Cove/",
+    "readableResume": "https://diegotellez.net/resume/",
+    "playableResume": "https://diegotellez.net/cv/"
+  },
+  "summary": "Independent software engineer specializing in distributed systems, applied AI, cloud infrastructure, and backend platforms. Shipped production NLP, GenAI, and RAG services; built systems supporting hundreds of thousands of players; reduced AWS costs by approximately $50,000 per year. Now developing Echoes of the Cove full time.",
+  "currentFocus": {
+    "project": "Echoes of the Cove",
+    "organization": "Silent Tide Software",
+    "started": "2024-11",
+    "fullTimeSince": "2025-10",
+    "status": "In development",
+    "plannedRelease": "2027",
+    "releaseNote": "2027 is the creator's current plan. The Steam listing has not announced a release date.",
+    "availability": "Contact Diego directly to discuss opportunities or collaborations. No employment availability is implied."
+  },
+  "experience": [
+    {"id":"silent-tide","company":"Silent Tide Software","role":"Senior Software Engineer & Founder","dates":"Nov 2024 – Present","start":"2024-11","end":null,"type":"Independent studio","highlights":["Lead end-to-end development of Echoes of the Cove, a commercial cross-platform 2D action RPG planned for 2027.","Own a custom C# / MonoGame-based engine, scripting systems, AI behavior, physics, data-driven gameplay, and developer tooling.","Profile and optimize CPU, memory, and rendering performance; manage production planning, QA, build pipelines, and release preparation.","Provide technical direction and integration standards for external contributors. Full-time focus since leaving the last employed role in October 2025."],"skills":["C#","MonoGame","Engine architecture","Game AI","Physics","Profiling","Build & release"]},
+    {"id":"carina","company":"Carina AI Studio","role":"AI Software Engineer","dates":"Jun 2025 – Oct 2025","start":"2025-06","end":"2025-10","type":"Full-time · Remote","highlights":["Built high-performance FastAPI endpoints exposing AI models and automated ML/DL training, validation, and serving pipelines.","Worked with PostgreSQL, vector stores, Pydantic, and LangChain / LangGraph to deliver production AI features.","Deployed and monitored solutions on AWS with Docker, Kubernetes, and GitHub Actions."],"skills":["Python","FastAPI","PostgreSQL","ML pipelines","AWS","Kubernetes"]},
+    {"id":"unusuall","company":"UnusuAll","role":"Senior Backend Engineer","dates":"Dec 2024 – Jun 2025","start":"2024-12","end":"2025-06","type":"Full-time · Remote","highlights":["Designed and maintained distributed server systems for mobile games supporting hundreds of thousands of players.","Focused on scalable architecture, runtime performance, reliability, and fault tolerance using C#, TypeScript, and cloud infrastructure.","The company ceased operations in June 2025."],"skills":["C#","TypeScript","Distributed systems","AWS","Google Cloud"]},
+    {"id":"intellect","company":"The Intellect Hub","role":"Founding Software Engineer","dates":"Mar 2024 – Jun 2025","start":"2024-03","end":"2025-06","type":"Self-employed","highlights":["Built an AI-driven education platform using custom agents and the Gemini API to create personalized learning experiences.","Used conversational assessment to generate structured courses, curate articles and videos, and create quizzes.","Featured in the Google Gemini API Developer Competition project showcase."],"skills":["AI agents","Gemini","FastAPI","Personalized learning"]},
+    {"id":"languagewire","company":"LanguageWire","role":"AI Applications Engineer","dates":"Mar 2024 – Dec 2024","start":"2024-03","end":"2024-12","type":"Full-time · Remote / Copenhagen","highlights":["Developed and deployed production NLP, GenAI, and RAG applications, microservices, and APIs in the Machine Learning Products & APIs team.","Built backend services, frontend interfaces, and databases while improving scalability, security, code quality, and maintainability."],"skills":["NLP","RAG","GenAI","APIs","Backend services"]},
+    {"id":"stuart-fullstack","company":"Stuart Delivery","role":"Full Stack Engineer","dates":"Jan 2023 – Mar 2024","start":"2023-01","end":"2024-03","type":"Full-time · Remote","highlights":["Built developer tools, internal platforms, and reusable libraries for reliable service-to-service communication.","Worked across platform reliability, experimentation, security, backend services, and developer experience."],"skills":["TypeScript","React","Kubernetes","Developer experience","Service-to-service communication"]},
+    {"id":"stuart-architect","company":"Stuart Delivery","role":"Junior Solutions Architect","dates":"Feb 2022 – Jan 2023","start":"2022-02","end":"2023-01","type":"Full-time · Remote","highlights":["Led a database cleanup initiative that reduced AWS costs by approximately $50,000 per year.","Designed and implemented Jenkins CI/CD pipelines and automated rich Grafana dashboards during application deployment.","Built and maintained an internal developer platform, a development CLI, core services, and a monorepo of more than 60 Node.js applications."],"skills":["AWS","Jenkins","Grafana","Node.js","TypeScript","CI/CD"]},
+    {"id":"teletrabajo","company":"Teletrabajo.app","role":"Founding Software Engineer","dates":"Jun 2023 – Jan 2024","start":"2023-06","end":"2024-01","type":"Self-employed · Remote","highlights":["Designed and developed a platform connecting professionals in Spain with remote work opportunities.","Owned product planning, a React single-page application, Node.js / Express APIs, and deployment on Netlify and Render."],"skills":["React","Node.js","Express","Product development"]},
+    {"id":"neoland","company":"NEOLAND","role":"Full Stack Development Teacher","dates":"Sep 2021 – Jan 2022","start":"2021-09","end":"2022-01","type":"Part-time · Madrid","highlights":["Taught the MERN stack through coding challenges, small projects, progress reviews, and hands-on debugging.","Reviewed student code and taught clear code, separation of responsibilities, SOLID, DRY, and effective use of documentation."],"skills":["Teaching","MongoDB","Express","React","Node.js","Code review"]},
+    {"id":"freelance","company":"Freelance","role":"Full Stack Developer","dates":"Sep 2021 – Dec 2021","start":"2021-09","end":"2021-12","type":"Freelance · Remote","highlights":["Contributed to a cross-platform greenhouse management application showing sensor data and controlling lighting, humidity, and temperature schedules.","Built with TypeScript, Angular 12, and Ionic 5, including a reusable Angular data-access library; worked with Docker, Kubernetes, ArgoCD, and Google Cloud deployment tooling."],"skills":["TypeScript","Angular","Ionic","IoT","Data-access libraries"]}
+  ],
+  "projects": [
+    {"name":"Echoes of the Cove","period":"2024 – Present","description":"An atmospheric 2D action RPG developed on a custom C# / MonoGame-based engine. Planned for 2027.","url":"https://echoesofthecove.com"},
+    {"name":"Confident","period":"2026","description":"Open-source offline AI chat between iPhone and Mac, using local LLMs and peer-to-peer Multipeer Connectivity.","url":"https://github.com/dtellz/confident"},
+    {"name":"The Intellect Hub","period":"2024 – 2025","description":"Personalized AI learning paths, content curation, and quizzes powered by Gemini and custom agents.","url":"https://ai.google.dev/competition/projects/the-intellect-hub"},
+    {"name":"Focus Time Only","period":"2025 – 2026","description":"Published privacy-first iOS productivity app with Pomodoro workflows, face-down detection, and on-device AI-generated motivational content. No user-data collection.","url":null},
+    {"name":"Teletrabajo.app","period":"2023 – 2024","description":"A remote-work platform for professionals in Spain, built with React and Node.js / Express.","url":null}
+  ],
+  "skills": {
+    "Languages":["Python","TypeScript","C#","Java","Scala","C++"],
+    "AI & backend":["GenAI","RAG","NLP","AI agents","ML/DL pipelines","Model serving","FastAPI","Flask","Spring Boot","NestJS",".NET"],
+    "Cloud & systems":["AWS","Azure","GCP","Docker","Kubernetes","Kafka","RabbitMQ","Linux","GitHub Actions","Jenkins","CI/CD"],
+    "Data & frontend":["PostgreSQL","MySQL","MongoDB","Redis","React","React Native","Angular","Vue.js"],
+    "Game development":["MonoGame","C# engine architecture","Game AI","Physics","Scripting","Profiling","Data-driven gameplay"]
+  },
+  "education": [
+    {"title":"BSc in Computer Science & Software Engineering","institution":"Universidad Internacional de Valencia","period":"2019 – 2022"},
+    {"title":"Edge AI (TinyML) Professional Certificate","institution":"Harvard University","period":"2023"},
+    {"title":"AI Agents","institution":"Hugging Face","period":"2025"}
+  ],
+  "extra": {
+    "title":"Before software",
+    "description":"Earlier maritime experience, separate from the software career.",
+    "experience":[
+      {"role":"Chief Officer","company":"Bernhard Schulte","dates":"Sep 2019 – Jun 2021","summary":"Led deck and galley teams totaling 10 people, with responsibility for operations, navigation, loading, maintenance, and safety."},
+      {"role":"Second Officer","company":"Bernhard Schulte","dates":"Nov 2016 – Sep 2019","summary":"Maritime operations and navigation."},
+      {"role":"Third Officer","company":"Grupo DISA","dates":"Jun 2017 – Aug 2017","summary":"Maritime operations."}
+    ],
+    "education":[{"title":"Master's in Nautical Engineering & Management","institution":"Universidad de Cantabria","period":"2018 – 2019"}]
+  },
+  "sources": [
+    {"name":"CV and complete professional experience provided by Diego","type":"first-party","asOf":"2026-10-08"},
+    {"name":"LinkedIn","url":"https://www.linkedin.com/in/diegotellezbarrero/"},
+    {"name":"GitHub","url":"https://github.com/dtellz"},
+    {"name":"Echoes of the Cove","url":"https://echoesofthecove.com"},
+    {"name":"Google AI project showcase","url":"https://ai.google.dev/competition/projects/the-intellect-hub"}
+  ]
+}

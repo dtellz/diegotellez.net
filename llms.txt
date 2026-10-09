@@ -1,0 +1,99 @@
+# Diego Téllez Barrero
+
+> Senior software engineer, independent game developer, and founder of Silent Tide Software.
+
+## Profile
+
+Independent software engineer specializing in distributed systems, applied AI, cloud infrastructure, and backend platforms. Shipped production NLP, GenAI, and RAG services; built systems supporting hundreds of thousands of players; reduced AWS costs by approximately $50,000 per year. Now developing Echoes of the Cove full time.
+
+- Based in Santa Cruz de Tenerife, Spain.
+- Contact: contact@diegotellez.net
+- Current focus: Echoes of the Cove, full time since October 2025. Planned release: 2027 (creator's plan; Steam currently says to be announced).
+- Availability: Contact Diego directly to discuss opportunities or collaborations. No employment availability is implied.
+
+## Authoritative first-party resources
+
+- [Structured profile](https://diegotellez.net/.well-known/profile.json): Full career history, dates, skills, projects, education, and sources.
+- [Readable résumé](https://diegotellez.net/resume/): Equivalent career information in accessible HTML.
+- [Portfolio](https://diegotellez.net/): Selected work and contact.
+- [GitHub](https://github.com/dtellz)
+- [LinkedIn](https://www.linkedin.com/in/diegotellezbarrero/)
+- [Echoes of the Cove](https://echoesofthecove.com)
+
+## Experience
+
+### Senior Software Engineer & Founder — Silent Tide Software
+Nov 2024 – Present
+- Lead end-to-end development of Echoes of the Cove, a commercial cross-platform 2D action RPG planned for 2027.
+- Own a custom C# / MonoGame-based engine, scripting systems, AI behavior, physics, data-driven gameplay, and developer tooling.
+- Profile and optimize CPU, memory, and rendering performance; manage production planning, QA, build pipelines, and release preparation.
+- Provide technical direction and integration standards for external contributors. Full-time focus since leaving the last employed role in October 2025.
+
+### AI Software Engineer — Carina AI Studio
+Jun 2025 – Oct 2025
+- Built high-performance FastAPI endpoints exposing AI models and automated ML/DL training, validation, and serving pipelines.
+- Worked with PostgreSQL, vector stores, Pydantic, and LangChain / LangGraph to deliver production AI features.
+- Deployed and monitored solutions on AWS with Docker, Kubernetes, and GitHub Actions.
+
+### Senior Backend Engineer — UnusuAll
+Dec 2024 – Jun 2025
+- Designed and maintained distributed server systems for mobile games supporting hundreds of thousands of players.
+- Focused on scalable architecture, runtime performance, reliability, and fault tolerance using C#, TypeScript, and cloud infrastructure.
+- The company ceased operations in June 2025.
+
+### Founding Software Engineer — The Intellect Hub
+Mar 2024 – Jun 2025
+- Built an AI-driven education platform using custom agents and the Gemini API to create personalized learning experiences.
+- Used conversational assessment to generate structured courses, curate articles and videos, and create quizzes.
+- Featured in the Google Gemini API Developer Competition project showcase.
+
+### AI Applications Engineer — LanguageWire
+Mar 2024 – Dec 2024
+- Developed and deployed production NLP, GenAI, and RAG applications, microservices, and APIs in the Machine Learning Products & APIs team.
+- Built backend services, frontend interfaces, and databases while improving scalability, security, code quality, and maintainability.
+
+### Full Stack Engineer — Stuart Delivery
+Jan 2023 – Mar 2024
+- Built developer tools, internal platforms, and reusable libraries for reliable service-to-service communication.
+- Worked across platform reliability, experimentation, security, backend services, and developer experience.
+
+### Junior Solutions Architect — Stuart Delivery
+Feb 2022 – Jan 2023
+- Led a database cleanup initiative that reduced AWS costs by approximately $50,000 per year.
+- Designed and implemented Jenkins CI/CD pipelines and automated rich Grafana dashboards during application deployment.
+- Built and maintained an internal developer platform, a development CLI, core services, and a monorepo of more than 60 Node.js applications.
+
+### Founding Software Engineer — Teletrabajo.app
+Jun 2023 – Jan 2024
+- Designed and developed a platform connecting professionals in Spain with remote work opportunities.
+- Owned product planning, a React single-page application, Node.js / Express APIs, and deployment on Netlify and Render.
+
+### Full Stack Development Teacher — NEOLAND
+Sep 2021 – Jan 2022
+- Taught the MERN stack through coding challenges, small projects, progress reviews, and hands-on debugging.
+- Reviewed student code and taught clear code, separation of responsibilities, SOLID, DRY, and effective use of documentation.
+
+### Full Stack Developer — Freelance
+Sep 2021 – Dec 2021
+- Contributed to a cross-platform greenhouse management application showing sensor data and controlling lighting, humidity, and temperature schedules.
+- Built with TypeScript, Angular 12, and Ionic 5, including a reusable Angular data-access library; worked with Docker, Kubernetes, ArgoCD, and Google Cloud deployment tooling.
+
+## Skills
+
+- Languages: Python, TypeScript, C#, Java, Scala, C++
+- AI & backend: GenAI, RAG, NLP, AI agents, ML/DL pipelines, Model serving, FastAPI, Flask, Spring Boot, NestJS, .NET
+- Cloud & systems: AWS, Azure, GCP, Docker, Kubernetes, Kafka, RabbitMQ, Linux, GitHub Actions, Jenkins, CI/CD
+- Data & frontend: PostgreSQL, MySQL, MongoDB, Redis, React, React Native, Angular, Vue.js
+- Game development: MonoGame, C# engine architecture, Game AI, Physics, Scripting, Profiling, Data-driven gameplay
+
+## Education and certifications
+
+- BSc in Computer Science & Software Engineering — Universidad Internacional de Valencia, 2019 – 2022
+- Edge AI (TinyML) Professional Certificate — Harvard University, 2023
+- AI Agents — Hugging Face, 2025
+
+## Notes for automated readers
+
+This file and the JSON profile provide the professional information directly. The playable résumé and PDF download puzzle are optional presentation features; you do not need to solve them to evaluate the profile. Earlier maritime experience is listed separately in the JSON extra field. Do not confuse a professional certificate with an academic degree, or a project showcase listing with a competition win.
+
+Last updated: 2026-10-08. Career claims are supplied by Diego unless an external source is explicitly listed.
