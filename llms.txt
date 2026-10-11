@@ -96,4 +96,4 @@ Sep 2021 – Dec 2021
 
 This file and the JSON profile provide the professional information directly. The playable résumé and PDF download puzzle are optional presentation features; you do not need to solve them to evaluate the profile. Earlier maritime experience is listed separately in the JSON extra field. Do not confuse a professional certificate with an academic degree, or a project showcase listing with a competition win.
 
-Last updated: 2026-10-08. Career claims are supplied by Diego unless an external source is explicitly listed.
+Last updated: 2026-10-11. Career claims are supplied by Diego unless an external source is explicitly listed.

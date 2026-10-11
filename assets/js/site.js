@@ -11,7 +11,5 @@ function setMotion() { document.documentElement.classList.toggle('motion-paused'
 setMotion();motion?.addEventListener('click',()=>{paused=!paused;setMotion();try{localStorage.setItem('dt-motion',paused?'paused':'running');}catch{}});
 const observer = new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}});},{threshold:.08});
 document.querySelectorAll('.section-heading,.featured-info,.project-row,.about-top,.about-grid,.capabilities,.contact-heading').forEach(el=>{el.classList.add('reveal');observer.observe(el);});
-const projectDialog=document.querySelector('#project-dialog');
-document.querySelector('[data-project="focus"]')?.addEventListener('click',()=>projectDialog.showModal());
 document.querySelectorAll('dialog .dialog-close').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
 document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));

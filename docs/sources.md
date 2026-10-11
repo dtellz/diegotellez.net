@@ -6,6 +6,7 @@ Reviewed 8 October 2026. Career claims come from Diego’s supplied CV, complete
 - [GitHub profile](https://github.com/dtellz): public engineering work. No changing follower, repository, or star counts are used as portfolio claims.
 - [Confident repository](https://github.com/dtellz/confident): offline iPhone-to-Mac local AI chat using Multipeer Connectivity.
 - [The Intellect Hub on Google AI](https://ai.google.dev/competition/projects/the-intellect-hub): the project is featured in the Gemini API Developer Competition showcase. This is not represented as a competition win.
+- [Focus Time Only](https://dtellz.github.io/focustimeonly.com/): project website. Diego supplied the launch achievement on 11 October 2026: the app reached the top 5 in Spain’s App Store productivity charts.
 - [Echoes of the Cove](https://echoesofthecove.com): game premise, current official art, and the studio’s project.
 - [Steam listing](https://store.steampowered.com/app/4094850/Echoes_of_the_Cove/): the public release date is “To be announced.” The portfolio’s planned 2027 release is explicitly supplied by Diego.
 

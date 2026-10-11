@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0",
-  "updated": "2026-10-08",
+  "updated": "2026-10-11",
   "name": "Diego Téllez Barrero",
   "shortName": "Diego Téllez",
   "headline": "Senior Software Engineer · Applied AI · Distributed Systems · Game Development",
@@ -42,8 +42,8 @@
     {"name":"Echoes of the Cove","period":"2024 – Present","description":"An atmospheric 2D action RPG developed on a custom C# / MonoGame-based engine. Planned for 2027.","url":"https://echoesofthecove.com"},
     {"name":"Confident","period":"2026","description":"Open-source offline AI chat between iPhone and Mac, using local LLMs and peer-to-peer Multipeer Connectivity.","url":"https://github.com/dtellz/confident"},
     {"name":"The Intellect Hub","period":"2024 – 2025","description":"Personalized AI learning paths, content curation, and quizzes powered by Gemini and custom agents.","url":"https://ai.google.dev/competition/projects/the-intellect-hub"},
-    {"name":"Focus Time Only","period":"2025 – 2026","description":"Published privacy-first iOS productivity app with Pomodoro workflows, face-down detection, and on-device AI-generated motivational content. No user-data collection.","url":null},
-    {"name":"Teletrabajo.app","period":"2023 – 2024","description":"A remote-work platform for professionals in Spain, built with React and Node.js / Express.","url":null}
+    {"name":"Focus Time Only","period":"2025 – 2026","description":"Published privacy-first iOS productivity app with Pomodoro workflows, face-down detection, and on-device AI-generated motivational content. No user-data collection. Reached the top 5 in Spain’s App Store productivity charts at launch.","url":"https://dtellz.github.io/focustimeonly.com/"},
+    {"name":"Teletrabajo.app","period":"2023 – 2024","description":"A remote-work platform for professionals in Spain, built with React and Node.js / Express.","url":"https://www.linkedin.com/company/teletrabajo-app/"}
   ],
   "skills": {
     "Languages":["Python","TypeScript","C#","Java","Scala","C++"],
@@ -72,6 +72,7 @@
     {"name":"LinkedIn","url":"https://www.linkedin.com/in/diegotellezbarrero/"},
     {"name":"GitHub","url":"https://github.com/dtellz"},
     {"name":"Echoes of the Cove","url":"https://echoesofthecove.com"},
-    {"name":"Google AI project showcase","url":"https://ai.google.dev/competition/projects/the-intellect-hub"}
+    {"name":"Google AI project showcase","url":"https://ai.google.dev/competition/projects/the-intellect-hub"},
+    {"name":"Focus Time Only website and launch ranking supplied by Diego","type":"first-party","url":"https://dtellz.github.io/focustimeonly.com/","asOf":"2026-10-11"}
   ]
 }
