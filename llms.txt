@@ -16,6 +16,7 @@ Senior software engineer working across distributed systems, applied AI, cloud i
 
 - [Structured profile](https://diegotellez.net/.well-known/profile.json): Full career history, dates, skills, projects, education and sources.
 - [Readable résumé](https://diegotellez.net/resume/): Equivalent career information in accessible HTML.
+- [Download CV (PDF)](https://diegotellez.net/assets/Diego-Tellez-CV.pdf): Original CV, available directly.
 - [Portfolio](https://diegotellez.net/): Selected work and contact.
 - [GitHub](https://github.com/dtellz)
 - [LinkedIn](https://www.linkedin.com/in/diegotellezbarrero/)
@@ -95,6 +96,6 @@ Sep 2021 – Dec 2021
 
 ## Notes for automated readers
 
-This file and the JSON profile provide the professional information directly. The playable résumé and PDF download puzzle are optional presentation features; you do not need to solve them to evaluate the profile. Earlier maritime experience is listed separately in the JSON extra field. Do not confuse a professional certificate with an academic degree or a project showcase listing with a competition win.
+This file and the JSON profile provide the professional information directly. The complete résumé is available as readable HTML and a direct PDF download. Earlier maritime experience is listed separately in the JSON extra field. Do not confuse a professional certificate with an academic degree or a project showcase listing with a competition win.
 
 Last updated: 2026-10-28. Career claims are supplied by Diego unless an external source is explicitly listed.

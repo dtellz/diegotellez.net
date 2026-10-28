@@ -3,13 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "description": "Diego Téllez’s AI-native software engineering portfolio, readable résumé and optional Three.js career atlas. Built with native HTML, CSS and JavaScript.",
+  "description": "Diego Téllez’s AI-native software engineering portfolio and readable résumé. Built with native HTML, CSS and JavaScript, with a direct PDF download.",
   "scripts": {
     "build": "node scripts/build.mjs",
     "content": "node scripts/content.mjs",
     "dev": "python3 -m http.server 4173 --bind 127.0.0.1",
     "preview": "python3 -m http.server 4173 --bind 127.0.0.1 --directory _site"
   },
-  "engines": { "node": ">=22" },
-  "vendoredDependencies": { "three": "0.186.1" }
+  "engines": { "node": ">=22" }
 }

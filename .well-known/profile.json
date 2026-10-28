@@ -13,7 +13,7 @@
     "game": "https://echoesofthecove.com",
     "steam": "https://store.steampowered.com/app/4094850/Echoes_of_the_Cove/",
     "readableResume": "https://diegotellez.net/resume/",
-    "playableResume": "https://diegotellez.net/cv/"
+    "downloadResume": "https://diegotellez.net/assets/Diego-Tellez-CV.pdf"
   },
   "summary": "Senior software engineer working across distributed systems, applied AI, cloud infrastructure and backend platforms. Shipped production NLP, GenAI and RAG services; built systems supporting hundreds of thousands of players; reduced AWS costs by approximately $50,000 per year. My focus is AI-native engineering: understanding the problem, designing maintainable systems, using AI to build, verifying the result and taking responsibility for product outcomes.",
   "engineeringFocus": "AI-native software engineering: problem framing, system design, technical judgment, AI-assisted implementation, verification and ownership of customer and business outcomes.",

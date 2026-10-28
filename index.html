@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en" data-theme="dark">
+<!-- shared:head -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +10,7 @@
   <meta name="description" content="Senior software engineer in Tenerife. Distributed systems, applied AI and product engineering. I frame problems, design systems, build with AI and own the outcome.">
   <link rel="canonical" href="https://diegotellez.net/">
   <meta property="og:title" content="Diego Téllez — AI-native Software Engineer">
-  <meta property="og:description" content="Distributed systems, applied AI and product engineering. From understanding the problem to owning what ships.">
+  <meta property="og:description" content="Senior software engineer in Tenerife. Distributed systems, applied AI and product engineering. I frame problems, design systems, build with AI and own the outcome.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://diegotellez.net/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
@@ -20,15 +21,17 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Diego Téllez Barrero","url":"https://diegotellez.net","jobTitle":"AI-native Senior Software Engineer","email":"contact@diegotellez.net","sameAs":["https://github.com/dtellz","https://www.linkedin.com/in/diegotellezbarrero/"],"homeLocation":{"@type":"Place","name":"Santa Cruz de Tenerife, Spain"},"knowsAbout":["System design","Distributed systems","Applied AI","AI-assisted engineering","Cloud infrastructure","Python","TypeScript","C#"]}</script>
   <script type="module" src="/assets/js/landing.js"></script>
 </head>
+<!-- /shared:head -->
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page-shell">
-    <header class="site-header">
+    <!-- shared:header -->
+<header class="site-header">
       <a class="identity" href="/" aria-label="Diego Téllez, home"><span class="prompt" aria-hidden="true">&gt;</span> dtellz<span class="path"> / home</span></a>
       <nav aria-label="Main navigation">
-        <a href="#work">work</a>
-        <a href="#approach">approach</a>
-        <a href="#about">about</a>
+        <a href="/#work">work</a>
+        <a href="/#approach">approach</a>
+        <a href="/#about">about</a>
         <a href="/resume/">résumé <span aria-hidden="true">↗</span></a>
       </nav>
       <button class="theme-toggle" type="button" aria-label="Use light theme" hidden>
@@ -36,6 +39,7 @@
         <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 14.5A9 9 0 0 1 9.5 3.5a9 9 0 1 0 11 11Z"/></svg>
       </button>
     </header>
+<!-- /shared:header -->
     <main id="main">
       <section class="hero section-grid" aria-labelledby="hero-heading">
         <div class="section-label hero-label"><span class="file-icon" aria-hidden="true">#</span> README.md</div>
@@ -49,6 +53,7 @@
             <a class="primary-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
             <a href="https://github.com/dtellz" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
             <a href="mailto:contact@diegotellez.net">Get in touch <span aria-hidden="true">↗</span></a>
+            <a href="/assets/Diego-Tellez-CV.pdf" download="Diego-Tellez-CV.pdf" type="application/pdf">Download CV <span aria-hidden="true">↓</span></a>
           </div>
           <div class="focus-line"><span class="comment-mark" aria-hidden="true">//</span><p>Good engineering starts before the first line of code<br class="desktop-break"> and continues after deployment.</p></div>
         </div>
@@ -128,7 +133,7 @@
             <div><dt>applied AI</dt><dd>RAG · Agents · Model serving · ML pipelines</dd></div>
             <div><dt>foundations</dt><dd>BSc Computer Science &amp; Software Engineering</dd></div>
           </dl>
-          <p class="aside-note">Also on this site: <a href="/cv/">an interactive résumé experiment <span aria-hidden="true">↗</span></a>.</p>
+          <p class="aside-note"><a href="/resume/">Read the full résumé <span aria-hidden="true">↗</span></a> or <a href="/assets/Diego-Tellez-CV.pdf" download="Diego-Tellez-CV.pdf" type="application/pdf">download the CV (PDF) <span aria-hidden="true">↓</span></a>.</p>
         </div>
       </section>
       <section class="section-grid contact-section" id="contact" aria-labelledby="contact-heading">
@@ -141,7 +146,9 @@
         </div>
       </section>
     </main>
-    <footer class="site-footer"><span>© <span data-year>2026</span> Diego Téllez</span><span>HTML. CSS. A little JavaScript.</span><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
+    <!-- shared:footer -->
+<footer class="site-footer"><span>© <span data-year>2026</span> Diego Téllez</span><a href="/assets/Diego-Tellez-CV.pdf" download="Diego-Tellez-CV.pdf" type="application/pdf">Download CV · PDF <span aria-hidden="true">↓</span></a><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
+<!-- /shared:footer -->
   </div>
 </body>
 </html>
