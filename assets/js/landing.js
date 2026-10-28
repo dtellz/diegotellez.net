@@ -3,7 +3,6 @@ const themeColor = document.querySelector('meta[name="theme-color"]');
 
 function syncTheme() {
   const light = document.documentElement.dataset.theme === 'light';
-  themeToggle?.setAttribute('aria-pressed', String(light));
   themeToggle?.setAttribute('aria-label', light ? 'Use dark theme' : 'Use light theme');
   themeToggle?.setAttribute('title', light ? 'Use dark theme' : 'Use light theme');
   themeColor?.setAttribute('content', light ? '#f8f8f4' : '#111313');
