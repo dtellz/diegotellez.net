@@ -2,6 +2,8 @@
 
 Reviewed 8 October 2026. Career claims come from Diego’s supplied CV, complete LinkedIn experience text, and direct instructions. The latest supplied experience text takes precedence over older CV dates where they differ (for example, LanguageWire began in March 2024).
 
+Positioning updated 28 October 2026 at Diego’s request: the landing now leads with AI-native software engineering, problem framing, system design, technical judgment, AI-assisted implementation, verification, and ownership of customer and business outcomes. This is Diego’s stated direction, not a claim about measured AI productivity or an official Amazon skills ranking. Historical roles, projects, and the independent studio’s current-focus facts remain intact; game development and world building are no longer the primary landing narrative.
+
 - [Diego’s LinkedIn profile](https://www.linkedin.com/in/diegotellezbarrero/): software, AI, and independent development. Full experience was supplied directly by Diego. Maritime roles are kept in a separate optional section.
 - [GitHub profile](https://github.com/dtellz): public engineering work. No changing follower, repository, or star counts are used as portfolio claims.
 - [Confident repository](https://github.com/dtellz/confident): offline iPhone-to-Mac local AI chat using Multipeer Connectivity.
@@ -15,7 +17,7 @@ Reviewed 8 October 2026. Career claims come from Diego’s supplied CV, complete
 - `assets/images/echoes-hero.webp` — [official hero artwork](https://echoesofthecove.com/assets/media/hero-wide.webp).
 - `assets/images/echoes-town.webp` — [official town screenshot](https://echoesofthecove.com/assets/media/rainy-town.webp).
 
-The 3D atlas is an original interactive résumé. Its sculptures, terrain, architectural metaphors, and optional challenges illustrate career themes; they are not footage from Echoes of the Cove. The actual game artwork is presented in its project feature and within the atlas’s Echoes portal.
+The 3D atlas is an original interactive résumé. Its sculptures, terrain, architectural metaphors, and optional challenges illustrate career themes; they are not footage from Echoes of the Cove. The actual game artwork remains available within the atlas’s Echoes portal.
 
 ## Downloadable CV
 
@@ -23,7 +25,7 @@ The supplied `Diego_Tellez_CV.pdf` is copied byte-for-byte into the website. It 
 
 ## Explicit constraints
 
-- Primary narrative: software engineering, applied AI, distributed systems, independent products, and Echoes of the Cove.
+- Primary narrative: AI-native software engineering, distributed systems, applied AI, technical judgment, verification, and ownership of product outcomes. Independent products provide concrete supporting evidence; game development is retained in the complete career history.
 - Earlier maritime experience: optional extra only.
 - No tests requested or added.
 - The initial pixel-art résumé prototype was discarded at Diego’s request and replaced with Three.js.

@@ -1,64 +1,147 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0b1211">
-  <title>Diego Téllez — Engineer & World Builder</title>
-  <meta name="description" content="Independent software engineer in Tenerife. Distributed systems, applied AI, and the worlds in between. Building Echoes of the Cove for 2027.">
+  <meta name="theme-color" content="#111313">
+  <meta name="color-scheme" content="dark light">
+  <title>Diego Téllez — AI-native Software Engineer</title>
+  <meta name="description" content="Senior software engineer in Tenerife. Distributed systems, applied AI, and product engineering. I frame problems, design systems, build with AI, and own the outcome.">
   <link rel="canonical" href="https://diegotellez.net/">
-  <meta property="og:title" content="Diego Téllez — Engineer & World Builder">
-  <meta property="og:description" content="Systems that scale. Worlds worth exploring. An independent engineer’s field atlas.">
+  <meta property="og:title" content="Diego Téllez — AI-native Software Engineer">
+  <meta property="og:description" content="Distributed systems, applied AI, and product engineering. From understanding the problem to owning what ships.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://diegotellez.net/">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <link rel="alternate" type="application/json" href="/.well-known/profile.json" title="Professional profile for automated readers">
+  <link rel="stylesheet" href="/assets/css/landing.css">
+  <link rel="alternate" type="application/json" href="/.well-known/profile.json" title="Structured professional profile">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="Machine-readable profile">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Diego Téllez Barrero","url":"https://diegotellez.net","jobTitle":"Independent Software Engineer & Game Developer","email":"contact@diegotellez.net","sameAs":["https://github.com/dtellz","https://www.linkedin.com/in/diegotellezbarrero/","https://echoesofthecove.com"],"homeLocation":{"@type":"Place","name":"Santa Cruz de Tenerife, Spain"},"knowsAbout":["Distributed systems","Applied AI","Game development","C#","Python","MonoGame"]}</script>
-  <script type="module" src="/assets/js/site.js"></script>
-  <script type="module" src="/assets/js/atlas.js"></script>
+  <script>try{const theme=localStorage.getItem('dt-theme');if(theme==='light'||theme==='dark')document.documentElement.dataset.theme=theme;}catch{}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Diego Téllez Barrero","url":"https://diegotellez.net","jobTitle":"AI-native Senior Software Engineer","email":"contact@diegotellez.net","sameAs":["https://github.com/dtellz","https://www.linkedin.com/in/diegotellezbarrero/"],"homeLocation":{"@type":"Place","name":"Santa Cruz de Tenerife, Spain"},"knowsAbout":["System design","Distributed systems","Applied AI","AI-assisted engineering","Cloud infrastructure","Python","TypeScript","C#"]}</script>
+  <script type="module" src="/assets/js/landing.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <a class="identity" href="/" aria-label="Diego Téllez, home"><span class="monogram">d<span>t</span>.</span><span>Diego Téllez<span class="identity-caption">Engineer & world builder</span></span></a>
-    <nav aria-label="Main navigation"><a href="#work">Selected work</a><a href="#journey">The journey</a><a href="/cv/" class="nav-play"><span class="tiny-diamond"></span> Play my CV</a></nav>
-    <a class="header-contact" href="mailto:contact@diegotellez.net">Let’s talk <span class="contact-star" aria-hidden="true">✳</span></a>
-  </header>
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-heading">
-      <div class="hero-topline mono"><span><span class="status-light"></span> Independent by choice.</span><span class="hero-coordinate">28°27′ N &nbsp; 16°15′ W</span></div>
-      <div class="hero-heading"><p class="eyebrow">Software engineer. Curious by nature.</p><h1 id="hero-heading">I build systems.<br>And <em>worlds.</em></h1></div>
-      <div class="atlas" id="atlas"><canvas id="atlas-canvas" aria-label="Interactive topographic sculpture. Drag to rotate the landscape."></canvas><div class="atlas-orbit orbit-one"></div><div class="atlas-orbit orbit-two"></div><span class="atlas-label mono">FIELD NOTES / 001</span><span class="atlas-detail mono">AN EXPLORATION OF<br>CODE & CURIOSITY</span><div class="atlas-marker"><span></span><span class="mono" id="atlas-location">THE WORLD BUILDER</span></div><span class="atlas-hint mono">DRAG TO EXPLORE <span aria-hidden="true">⤧</span></span></div>
-      <div class="hero-bottom"><div class="hero-intro"><p>From systems serving hundreds of thousands<br class="desktop-break"> to a world you can get lost in.</p><p class="muted">I’m Diego. I turn complex ideas into things that live.<br>Currently building <a href="#echoes">Echoes of the Cove</a>, full time.</p><a class="text-link" href="#work">Explore my work <span class="link-plus" aria-hidden="true">+</span></a></div><div class="atlas-modes" role="group" aria-label="Explore areas of work"><button class="active" data-terrain="worlds" aria-pressed="true"><span>01</span> Worlds</button><button data-terrain="systems" aria-pressed="false"><span>02</span> Systems</button><button data-terrain="intelligence" aria-pressed="false"><span>03</span> Intelligence</button></div></div>
-      <div class="hero-foot mono"><span>TENERIFE, CANARY ISLANDS <span id="local-time"></span></span><span>SCROLL TO DISCOVER <span aria-hidden="true">↓</span></span></div>
-    </section>
-
-    <section class="work-section section-shell" id="work" aria-labelledby="work-heading">
-      <div class="section-heading"><p class="eyebrow"><span>01 /</span> Selected work</p><h2 id="work-heading">Ideas made <em>real.</em></h2><p>Different mediums.<br>The same need to build.</p></div>
-      <article class="featured-project" id="echoes">
-        <a class="project-image" href="https://echoesofthecove.com" target="_blank" rel="noopener"><img src="/assets/images/echoes-hero.webp" alt="The pixel-art world of Echoes of the Cove, with a lone adventurer overlooking a mountain waterfall" width="2000" height="1114" loading="lazy"><span class="image-index mono">PROJECT 001</span><span class="image-badge mono">IN DEVELOPMENT · 2027</span><span class="image-caption">One developer.<br>An entire world.</span></a>
-        <div class="featured-info"><div><p class="eyebrow">My main quest</p><h3>Echoes of<br>the Cove</h3><p class="project-role">Founder & solo developer · Silent Tide Software</p></div><div><p>A missing father. A fading coastal town. A diary that leads somewhere deeper. An atmospheric 2D action RPG about the things we leave behind.</p><p class="muted">I left my last role in 2025 to build it full time. From a custom C# / MonoGame engine to AI, physics, tools, and release — I own the whole journey.</p><div class="tags"><span>C#</span><span>MonoGame</span><span>Custom engine</span><span>Handcrafted pixel art</span></div><div class="project-links"><a class="text-link" href="https://echoesofthecove.com" target="_blank" rel="noopener">Enter the Cove <span class="link-plus" aria-hidden="true">+</span></a><a class="quiet-link" href="https://store.steampowered.com/app/4094850/Echoes_of_the_Cove/" target="_blank" rel="noopener">Wishlist on Steam</a></div></div></div>
-      </article>
-      <div class="other-projects">
-        <article class="project-row"><span class="project-number mono">002</span><div class="project-row-title"><p class="eyebrow">Private, local intelligence</p><h3>Confident</h3></div><p>A conversation that stays yours. An offline iPhone ↔ Mac AI companion, connecting over Bluetooth and peer-to-peer Wi-Fi.</p><div class="project-row-end"><span class="mono">SWIFT · LOCAL LLMs</span><a href="https://github.com/dtellz/confident" target="_blank" rel="noopener" class="circle-link" aria-label="Explore Confident on GitHub">+</a></div></article>
-        <article class="project-row"><span class="project-number mono">003</span><div class="project-row-title"><p class="eyebrow">Learning, reimagined</p><h3>The Intellect Hub</h3></div><p>An AI learning platform that turns your goals into a personal curriculum. Built with Gemini; featured in Google’s developer competition showcase.</p><div class="project-row-end"><span class="mono">GEMINI · APPLIED AI</span><a href="https://ai.google.dev/competition/projects/the-intellect-hub" target="_blank" rel="noopener" class="circle-link" aria-label="View The Intellect Hub on Google AI">+</a></div></article>
-        <article class="project-row"><span class="project-number mono">004</span><div class="project-row-title"><p class="eyebrow">A little more presence</p><h3>Focus Time Only</h3></div><p>A privacy-first iOS app for deeper work. Pomodoro sessions, face-down detection, and on-device AI. No user-data collection. <strong>Reached the top 5 in Spain’s App Store productivity charts at launch.</strong></p><div class="project-row-end"><span class="mono">iOS · ON-DEVICE AI</span><a href="https://dtellz.github.io/focustimeonly.com/" target="_blank" rel="noopener" class="circle-link" aria-label="Explore Focus Time Only">+</a></div></article>
-      </div>
-    </section>
-
-    <section class="about-section section-shell" id="journey" aria-labelledby="journey-heading">
-      <div class="about-top"><p class="eyebrow"><span>02 /</span> The journey</p><h2 id="journey-heading">A career isn’t a ladder.<br>It’s an <em>open world.</em></h2></div>
-      <div class="about-grid"><div class="about-story"><p>I like understanding how things work, all the way down. That curiosity has taken me from teaching people to code to building distributed platforms, production AI, and now a game engine of my own.</p><p class="muted">I’ve worked on platforms supporting hundreds of thousands of players and cut $50,000 a year from cloud costs. In 2025, I stepped away from my last role to turn a side project into my full-time work.</p><div class="about-signature">Diego Téllez<span class="mono">ALWAYS BUILDING. ALWAYS LEARNING.</span></div><a class="text-link" href="/resume/">Read the full résumé <span class="link-plus" aria-hidden="true">+</span></a></div><div class="timeline"><div class="timeline-item current"><span class="mono">2024 — NOW</span><div><h3>Silent Tide Software</h3><p>Founder & Senior Software Engineer</p><span class="small-note">Full time since 2025. Echoes of the Cove, planned for 2027.</span></div></div><div class="timeline-item"><span class="mono">2025</span><div><h3>Carina AI Studio</h3><p>AI Software Engineer</p></div></div><div class="timeline-item"><span class="mono">2024 — 2025</span><div><h3>UnusuAll</h3><p>Senior Backend Engineer</p></div></div><div class="timeline-item"><span class="mono">2024</span><div><h3>LanguageWire</h3><p>AI Applications Engineer</p></div></div><div class="timeline-item"><span class="mono">2022 — 2024</span><div><h3>Stuart Delivery</h3><p>Full Stack Engineer / Junior Solutions Architect</p></div></div></div></div>
-      <div class="capabilities"><div><span class="mono">01 / SYSTEMS</span><h3>Built to hold up.</h3><p>Distributed backends, cloud infrastructure, event-driven systems, and the tooling that keeps them running.</p><span class="capability-stack">Python · TypeScript · C# · Java · AWS · Kubernetes</span></div><div><span class="mono">02 / INTELLIGENCE</span><h3>Beyond the demo.</h3><p>Production NLP, RAG, agents, and ML pipelines. A growing fascination with intelligence that runs on your own hardware.</p><span class="capability-stack">FastAPI · GenAI · MLOps · Edge AI · Reinforcement learning</span></div><div><span class="mono">03 / WORLDS</span><h3>Made to be felt.</h3><p>Engine architecture, gameplay, physics, and developer tools. The invisible systems behind a memorable experience.</p><span class="capability-stack">MonoGame · Game AI · 2D systems · Cross-platform</span></div></div>
-    </section>
-
-    <section class="play-section section-shell" aria-labelledby="play-heading"><div class="play-copy"><p class="eyebrow"><span>03 /</span> A different kind of résumé</p><h2 id="play-heading">Don’t just read<br>my story.<br><em>Walk through it.</em></h2><p>Seven landmarks. One living landscape.<br>Explore the systems, connect the ideas,<br>and discover the person behind the work.</p><a href="/cv/" class="button button-accent"><span class="tiny-diamond"></span> Play my CV <span class="button-meta">EXPLORE IN 3D</span></a><button class="download-trigger quiet-link">Or unlock the PDF</button></div><a href="/cv/" class="play-art" aria-label="Enter the playable résumé"><img src="/assets/images/living-atlas.svg" width="1000" height="1100" alt="An orbital sculpture above a topographic island, a window into the Living Atlas" loading="lazy"><span class="play-art-shade"></span><span class="play-art-title mono">SEVEN CHAPTERS.<br>ONE CONTINUOUS<br>CURIOSITY.</span><span class="play-art-footer mono">THE LIVING ATLAS <span>ENTER THE WORLD ↗</span></span></a></section>
-
-    <section class="contact-section section-shell" id="contact"><p class="eyebrow"><span>04 /</span> Open a conversation</p><div class="contact-heading"><h2>What could we<br>build <em>together?</em></h2><a class="contact-orb" href="mailto:contact@diegotellez.net" aria-label="Email Diego"><span aria-hidden="true">✳</span></a></div><div class="contact-bottom"><a class="email-link" href="mailto:contact@diegotellez.net">contact@diegotellez.net</a><p class="muted">Interesting ideas, thoughtful collaborations,<br>or a conversation about making things.</p></div></section>
-  </main>
-  <footer class="site-footer"><span class="mono">© <span data-year>2026</span> DIEGO TÉLLEZ</span><span class="footer-note">Built with intent. From an island in the Atlantic.</span><div><a href="https://github.com/dtellz" target="_blank" rel="noopener">GitHub</a><a href="https://www.linkedin.com/in/diegotellezbarrero/" target="_blank" rel="noopener">LinkedIn</a><button class="download-trigger">Download CV</button></div></footer>
-  <button class="motion-toggle" aria-pressed="false" aria-label="Pause ambient animation"><span aria-hidden="true">Ⅱ</span> <span class="motion-label">Pause motion</span></button>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="identity" href="/" aria-label="Diego Téllez, home"><span class="prompt" aria-hidden="true">&gt;</span> dtellz<span class="path"> / home</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#work">work</a>
+        <a href="#approach">approach</a>
+        <a href="#about">about</a>
+        <a href="/resume/">résumé <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Use light theme" aria-pressed="false" hidden>
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 14.5A9 9 0 0 1 9.5 3.5a9 9 0 1 0 11 11Z"/></svg>
+      </button>
+    </header>
+    <main id="main">
+      <section class="hero section-grid" aria-labelledby="hero-heading">
+        <div class="section-label hero-label"><span class="file-icon" aria-hidden="true">#</span> README.md</div>
+        <div class="section-content">
+          <p class="location"><span class="status-dot" aria-hidden="true"></span> Tenerife, Spain <span class="location-divider">/</span> Independent engineer</p>
+          <h1 id="hero-heading">Diego Téllez<span class="name-period">.</span></h1>
+          <p class="hero-role">AI-native software engineer.</p>
+          <p class="hero-intro">I turn ambiguous problems into reliable software. I work across <strong>distributed systems, applied AI, and developer platforms.</strong></p>
+          <p class="hero-perspective">AI is part of how I build. Understanding the problem, choosing the trade-offs, and verifying the result are still my responsibility.</p>
+          <div class="hero-links">
+            <a class="primary-link" href="#work">Explore my work <span aria-hidden="true">↓</span></a>
+            <a href="https://github.com/dtellz" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a>
+            <a href="mailto:contact@diegotellez.net">Get in touch <span aria-hidden="true">↗</span></a>
+          </div>
+          <div class="focus-line"><span class="comment-mark" aria-hidden="true">//</span><p>Good engineering starts before the first line of code<br class="desktop-break"> and continues after deployment.</p></div>
+        </div>
+      </section>
+      <section class="section-grid work-section" id="work" aria-labelledby="work-heading">
+        <div class="section-label"><span class="section-number">01</span> / work</div>
+        <div class="section-content">
+          <div class="section-heading"><h2 id="work-heading">Engineering in practice</h2><span class="section-note">selected experience</span></div>
+          <p class="section-intro">Systems shipped. Costs reduced. Tools that help other engineers build.</p>
+          <div class="experience-list">
+            <article class="experience-row">
+              <div class="experience-heading"><h3><a href="/resume/#stuart-architect">Stuart Delivery <span aria-hidden="true">↗</span></a></h3><span class="period">2022–2024</span></div>
+              <p class="experience-role">Full Stack Engineer / Junior Solutions Architect</p>
+              <p>Led a database cleanup that reduced AWS costs by <strong>approximately $50,000/year.</strong> Built internal developer tooling, CI/CD pipelines, and deployment observability across a platform with 60+ Node.js applications.</p>
+              <ul class="tech-list" aria-label="Stuart technologies"><li>TypeScript</li><li>AWS</li><li>Kubernetes</li><li>Grafana</li></ul>
+            </article>
+            <article class="experience-row">
+              <div class="experience-heading"><h3><a href="/resume/#carina">Carina AI Studio <span aria-hidden="true">↗</span></a></h3><span class="period">2025</span></div>
+              <p class="experience-role">AI Software Engineer</p>
+              <p>Built model-serving APIs and automated ML training, validation, and serving pipelines. Delivered production AI features with PostgreSQL and vector stores, then deployed and monitored them on AWS.</p>
+              <ul class="tech-list" aria-label="Carina technologies"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Kubernetes</li></ul>
+            </article>
+            <article class="experience-row">
+              <div class="experience-heading"><h3><a href="/resume/#languagewire">LanguageWire <span aria-hidden="true">↗</span></a></h3><span class="period">2024</span></div>
+              <p class="experience-role">AI Applications Engineer</p>
+              <p>Developed and deployed NLP, GenAI, and RAG applications in the Machine Learning Products &amp; APIs team, with attention to scalability, security, and maintainability.</p>
+              <ul class="tech-list" aria-label="LanguageWire engineering areas"><li>NLP</li><li>RAG</li><li>Microservices</li><li>APIs</li></ul>
+            </article>
+          </div>
+          <a class="inline-link resume-link" href="/resume/">Full experience &amp; background <span aria-hidden="true">→</span></a>
+          <div class="projects-heading"><h3>Things I’ve built</h3><span class="section-note">independent projects</span></div>
+          <div class="project-list">
+            <article class="project">
+              <div class="project-heading"><h4><a href="https://github.com/dtellz/confident" target="_blank" rel="noopener"><span class="repo-icon" aria-hidden="true">⌘</span> confident <span aria-hidden="true">↗</span></a></h4><span class="project-kind">open source</span></div>
+              <p>Private AI chat between iPhone and Mac. Local models, offline operation, and peer-to-peer connectivity.</p>
+              <details class="project-notes"><summary>Architecture notes <span aria-hidden="true">+</span></summary><div class="project-notes-body"><p>Local LLMs on the Mac, an iPhone client, and Multipeer Connectivity over Bluetooth and peer-to-peer Wi-Fi. The architecture keeps the conversation on your own devices.</p><div class="connection-diagram" aria-label="iPhone connects peer to peer to a Mac running a local language model"><span>iPhone</span><span class="connection" aria-hidden="true">← peer to peer →</span><span>Mac / local LLM</span></div></div></details>
+              <ul class="tech-list" aria-label="Confident technologies"><li>Swift</li><li>Local LLMs</li><li>Multipeer Connectivity</li></ul>
+            </article>
+            <article class="project">
+              <div class="project-heading"><h4><a href="https://ai.google.dev/competition/projects/the-intellect-hub" target="_blank" rel="noopener"><span class="repo-icon" aria-hidden="true">⌘</span> the-intellect-hub <span aria-hidden="true">↗</span></a></h4><span class="project-kind">applied AI</span></div>
+              <p>From a learning goal to a structured curriculum. AI agents support assessment, resource curation, and quizzes.</p>
+              <details class="project-notes"><summary>Product notes <span aria-hidden="true">+</span></summary><div class="project-notes-body"><p>A conversational assessment shapes the learning path. Gemini and custom agents generate courses, curate articles and videos, and create quizzes. Featured in the Google Gemini API Developer Competition project showcase.</p></div></details>
+              <ul class="tech-list" aria-label="The Intellect Hub technologies"><li>Gemini</li><li>AI agents</li><li>FastAPI</li></ul>
+            </article>
+            <article class="project">
+              <div class="project-heading"><h4><a href="https://dtellz.github.io/focustimeonly.com/" target="_blank" rel="noopener"><span class="repo-icon" aria-hidden="true">⌘</span> focus-time-only <span aria-hidden="true">↗</span></a></h4><span class="project-kind">shipped / iOS</span></div>
+              <p>A privacy-first app for focused work. Pomodoro sessions, face-down detection, and on-device AI.</p>
+              <details class="project-notes"><summary>Product notes <span aria-hidden="true">+</span></summary><div class="project-notes-body"><p>On-device AI generates motivational content without collecting user data. Reached the top 5 in Spain’s App Store productivity charts at launch.</p></div></details>
+              <ul class="tech-list" aria-label="Focus Time Only engineering areas"><li>iOS</li><li>On-device AI</li><li>Privacy</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section-grid approach-section" id="approach" aria-labelledby="approach-heading">
+        <div class="section-label"><span class="section-number">02</span> / approach</div>
+        <div class="section-content">
+          <div class="section-heading"><h2 id="approach-heading">How I approach the work</h2></div>
+          <p class="section-intro">AI changes the workflow. I’m accountable for the outcome.</p>
+          <ol class="workflow">
+            <li><div class="step-label"><span class="step-number" aria-hidden="true">01</span><h3>Understand the problem<span class="code-punctuation">()</span></h3></div><p>Get close to the user. Question the requirement, identify the constraints, and define what a useful result looks like.</p></li>
+            <li><div class="step-label"><span class="step-number" aria-hidden="true">02</span><h3>Design the system<span class="code-punctuation">()</span></h3></div><p>Break the problem down. Make trade-offs around cost, consistency, reliability, and maintenance explicit. Start with the simplest architecture that fits.</p></li>
+            <li><div class="step-label"><span class="step-number" aria-hidden="true">03</span><h3>Build with AI<span class="code-punctuation">()</span></h3></div><p>Give agents bounded tasks and the context to do them well. Use them to explore, implement, and refactor. Know when a direct solution is better.</p></li>
+            <li><div class="step-label"><span class="step-number" aria-hidden="true">04</span><h3>Verify the solution<span class="code-punctuation">()</span></h3></div><p>Read the code. Test the assumptions and failure paths. Check security, debug the root cause, and build evidence that the system behaves correctly.</p></li>
+            <li><div class="step-label"><span class="step-number" aria-hidden="true">05</span><h3>Own the result<span class="code-punctuation">()</span></h3></div><p>Follow the change into production. Observe how it performs, measure it against the original need, communicate what changed, and keep learning.</p></li>
+          </ol>
+          <p class="approach-note"><span aria-hidden="true">↳</span> The measure of success: useful software that holds up in the real world.</p>
+        </div>
+      </section>
+      <section class="section-grid about-section" id="about" aria-labelledby="about-heading">
+        <div class="section-label"><span class="section-number">03</span> / about</div>
+        <div class="section-content">
+          <div class="section-heading"><h2 id="about-heading">An engineer, always learning.</h2></div>
+          <div class="about-copy"><p>I’m Diego, a senior software engineer based in Tenerife. My work has taken me from teaching people to code to developer platforms, distributed backends, and production AI.</p><p>I like understanding how things work all the way down. My focus now is bringing that foundation to AI-assisted engineering: better problem framing, sound architecture, careful verification, and end-to-end ownership.</p></div>
+          <dl class="toolbox">
+            <div><dt>languages</dt><dd>Python · TypeScript · C# · Java</dd></div>
+            <div><dt>systems</dt><dd>AWS · Kubernetes · PostgreSQL · Redis · Kafka</dd></div>
+            <div><dt>applied AI</dt><dd>RAG · Agents · Model serving · ML pipelines</dd></div>
+            <div><dt>foundations</dt><dd>BSc Computer Science &amp; Software Engineering</dd></div>
+          </dl>
+          <p class="aside-note">Also on this site: <a href="/cv/">an interactive résumé experiment <span aria-hidden="true">↗</span></a>.</p>
+        </div>
+      </section>
+      <section class="section-grid contact-section" id="contact" aria-labelledby="contact-heading">
+        <div class="section-label"><span class="section-number">04</span> / contact</div>
+        <div class="section-content">
+          <h2 id="contact-heading">Have a problem worth solving?</h2>
+          <p>I’m happy to talk about systems, applied AI, and useful things to build.</p>
+          <a class="contact-email" href="mailto:contact@diegotellez.net">contact@diegotellez.net <span aria-hidden="true">↗</span></a>
+          <div class="contact-links"><a href="https://github.com/dtellz" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a><a href="https://www.linkedin.com/in/diegotellezbarrero/" target="_blank" rel="noopener">LinkedIn <span aria-hidden="true">↗</span></a><a href="/resume/">Résumé <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><span>© <span data-year>2026</span> Diego Téllez</span><span>HTML. CSS. A little JavaScript.</span><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
+  </div>
 </body>
 </html>
