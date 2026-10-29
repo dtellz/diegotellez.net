@@ -20,7 +20,8 @@ export function documentHead({ title, description, canonical, resume = false, bl
   ${canonical ? `<meta property="og:url" content="${esc(canonical)}">` : ''}
   ${article ? `<meta name="author" content="${esc(article.author)}"><meta property="article:published_time" content="${esc(article.published)}">` : ''}
   ${image ? `<meta property="og:image" content="${esc(image.url)}"><meta property="og:image:width" content="${esc(image.width)}"><meta property="og:image:height" content="${esc(image.height)}"><meta property="og:image:alt" content="${esc(image.alt)}"><meta name="twitter:card" content="summary_large_image">` : ''}
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon.ico?v=2" sizes="16x16 32x32 48x48" type="image/x-icon">
+  <link rel="icon" href="/assets/favicon.svg?v=2" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/landing.css">
   ${resume ? '<link rel="stylesheet" href="/assets/css/resume.css">' : ''}
   ${blog ? '<link rel="stylesheet" href="/assets/css/blog.css">' : ''}

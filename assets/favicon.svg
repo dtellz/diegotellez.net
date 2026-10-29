@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#0b1211"/><path d="M15 34h13V17h7v32H15zm7 6v3h6V29h-6zm18-13h5v-9h7v9h6v6h-6v10h6v6H45V33h-5z" fill="#d4e88b"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">Diego Téllez</title>
+  <desc id="description">A geometric D with a command-prompt cutout, in sage on charcoal.</desc>
+  <rect width="64" height="64" rx="14" fill="#111313"/>
+  <path d="M12 12H31C45 12 54 20 54 32S45 52 31 52H12Z" fill="#b1d6a0"/>
+  <path d="M23 19L37 32L23 45H32L46 32L32 19Z" fill="#111313"/>
+</svg>

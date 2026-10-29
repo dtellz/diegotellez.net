@@ -34,6 +34,8 @@ The homepage’s editorial copy is in `index.html`. Shared page structure is gen
 
 PDF links download the original CV directly. The site has no game renderer or download puzzle.
 
+The favicon is a geometric D with a command-prompt cutout in the site’s sage and charcoal colors. `assets/favicon.svg` is the vector master; `assets/favicon.ico` contains 16px, 32px and 48px fallbacks. All pages reference both through the shared layout.
+
 Replace `assets/Diego-Tellez-CV.pdf` when the original CV changes. The build copies this file without modifying or regenerating it.
 
 ## Write a blog post
