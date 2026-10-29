@@ -20,7 +20,7 @@ export async function generateContent(root) {
   };
   const homepageParts = {
     head: documentHead({
-      title: 'Diego Téllez — AI-native Software Engineer',
+      title: 'Diego Téllez - AI-native Software Engineer',
       description: 'Senior software engineer in Tenerife. Distributed systems, applied AI and product engineering. I frame problems, design systems, build with AI and own the outcome.',
       canonical: `${p.website}/`, person
     }),
@@ -37,7 +37,7 @@ export async function generateContent(root) {
   await writeFile(new URL('index.html', root), homepage);
 
   const resume = documentPage({
-    page: 'résumé', resume: true, title: 'Résumé — Diego Téllez | AI-native Software Engineer',
+    page: 'résumé', resume: true, title: 'Résumé - Diego Téllez | AI-native Software Engineer',
     description: 'Diego Téllez’s complete software engineering experience, independent projects, skills and education. Read the résumé or download the original PDF.',
     canonical: p.links.readableResume,
     body: `
@@ -65,17 +65,17 @@ export async function generateContent(root) {
   await writeFile(new URL('resume/index.html', root), resume);
 
   await writeFile(new URL('404.html', root), documentPage({
-    page: '404', title: '404 — Page not found | Diego Téllez', noindex: true,
+    page: '404', title: '404 - Page not found | Diego Téllez', noindex: true,
     description: 'This page could not be found. Return to Diego Téllez’s portfolio or read the résumé.',
     body: `<section class="section-grid utility-page" aria-labelledby="error-heading"><div class="section-label"><span class="section-number">404</span> / not found</div><div class="section-content"><p class="utility-status">HTTP 404</p><h1 id="error-heading">Page not found<span class="name-period">.</span></h1><p class="hero-perspective">This URL doesn’t point to a page. You can head back to the portfolio or read my résumé.</p><div class="hero-links"><a class="primary-link" href="/">Back to home <span aria-hidden="true">→</span></a><a href="/resume/">Read résumé <span aria-hidden="true">↗</span></a>${downloadLink()}</div></div></section>`
   }));
   await mkdir(new URL('cv/', root), { recursive: true });
   await writeFile(new URL('cv/index.html', root), documentPage({
-    page: 'cv', title: 'CV — Diego Téllez', noindex: true, redirect: '/resume/', canonical: p.links.readableResume,
+    page: 'cv', title: 'CV - Diego Téllez', noindex: true, redirect: '/resume/', canonical: p.links.readableResume,
     description: 'Read Diego Téllez’s résumé or download the original CV as a PDF.',
     body: `<section class="section-grid utility-page" aria-labelledby="cv-heading"><div class="section-label"><span class="file-icon" aria-hidden="true">#</span> CV</div><div class="section-content"><h1 id="cv-heading">My résumé<span class="name-period">.</span></h1><p class="hero-perspective">Continue to the résumé or download the PDF directly.</p><div class="hero-links"><a class="primary-link" href="/resume/">Read résumé <span aria-hidden="true">→</span></a>${downloadLink()}</div></div></section>`
   }));
-  const text = `# Diego Téllez Barrero\n\n> ${p.headline}\n\n## Profile\n\n${p.summary}\n\n- Based in ${p.location}.\n- Contact: ${p.email}\n- Engineering focus: ${p.engineeringFocus}\n- Independent project: ${p.currentFocus.project}, full time since October 2025. Planned release: 2027 (creator's plan; Steam currently says to be announced).\n- Availability: ${p.currentFocus.availability}\n\n## Authoritative first-party resources\n\n- [Structured profile](https://diegotellez.net/.well-known/profile.json): Full career history, dates, skills, projects, education and sources.\n- [Readable résumé](https://diegotellez.net/resume/): Equivalent career information in accessible HTML.\n- [Download CV (PDF)](${p.links.downloadResume}): Original CV, available directly.\n- [Portfolio](https://diegotellez.net/): Selected work and contact.\n- [Blog](https://diegotellez.net/blog/): First-person notes on AI-native engineering and professional experience.\n- [GitHub](${p.links.github})\n- [LinkedIn](${p.links.linkedin})\n- [Echoes of the Cove](${p.links.game})\n\n## Experience\n\n${p.experience.map(r=>`### ${r.role} — ${r.company}\n${r.dates}\n${r.highlights.map(h=>'- '+h).join('\n')}`).join('\n\n')}\n\n## Skills\n\n${Object.entries(p.skills).map(([k,v])=>`- ${k}: ${v.join(', ')}`).join('\n')}\n\n## Education and certifications\n\n${p.education.map(e=>`- ${e.title} — ${e.institution}, ${e.period}`).join('\n')}\n\n## Notes for automated readers\n\nThis file and the JSON profile provide the professional information directly. The complete résumé is available as readable HTML and a direct PDF download. Earlier maritime experience is listed separately in the JSON extra field. Do not confuse a professional certificate with an academic degree or a project showcase listing with a competition win.\n\nLast updated: ${p.updated}. Career claims are supplied by Diego unless an external source is explicitly listed.\n`;
+  const text = `# Diego Téllez Barrero\n\n> ${p.headline}\n\n## Profile\n\n${p.summary}\n\n- Based in ${p.location}.\n- Contact: ${p.email}\n- Engineering focus: ${p.engineeringFocus}\n- Independent project: ${p.currentFocus.project}, full time since October 2025. Planned release: 2027 (creator's plan; Steam currently says to be announced).\n- Availability: ${p.currentFocus.availability}\n\n## Authoritative first-party resources\n\n- [Structured profile](https://diegotellez.net/.well-known/profile.json): Full career history, dates, skills, projects, education and sources.\n- [Readable résumé](https://diegotellez.net/resume/): Equivalent career information in accessible HTML.\n- [Download CV (PDF)](${p.links.downloadResume}): Original CV, available directly.\n- [Portfolio](https://diegotellez.net/): Selected work and contact.\n- [Blog](https://diegotellez.net/blog/): First-person notes on AI-native engineering and professional experience.\n- [GitHub](${p.links.github})\n- [LinkedIn](${p.links.linkedin})\n- [Echoes of the Cove](${p.links.game})\n\n## Experience\n\n${p.experience.map(r=>`### ${r.role} - ${r.company}\n${r.dates}\n${r.highlights.map(h=>'- '+h).join('\n')}`).join('\n\n')}\n\n## Skills\n\n${Object.entries(p.skills).map(([k,v])=>`- ${k}: ${v.join(', ')}`).join('\n')}\n\n## Education and certifications\n\n${p.education.map(e=>`- ${e.title} - ${e.institution}, ${e.period}`).join('\n')}\n\n## Notes for automated readers\n\nThis file and the JSON profile provide the professional information directly. The complete résumé is available as readable HTML and a direct PDF download. Earlier maritime experience is listed separately in the JSON extra field. Do not confuse a professional certificate with an academic degree or a project showcase listing with a competition win.\n\nLast updated: ${p.updated}. Career claims are supplied by Diego unless an external source is explicitly listed.\n`;
   await writeFile(new URL('llms.txt', root), text);
 }
 

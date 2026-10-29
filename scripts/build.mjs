@@ -10,4 +10,4 @@ await mkdir(output, {recursive:true});
 for (const item of ['index.html','404.html','assets','blog','cv','resume','.well-known','llms.txt','robots.txt','sitemap.xml','CNAME','.nojekyll']) {
   await cp(new URL(item,root),new URL(item,output),{recursive:true});
 }
-console.log('Static site ready in _site/ — shared HTML layouts, CSS and JavaScript.');
+console.log('Static site ready in _site/ - shared HTML layouts, CSS and JavaScript.');

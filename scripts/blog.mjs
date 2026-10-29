@@ -51,7 +51,7 @@ export async function generateBlog(root, profile) {
     const headings = [...post.body.matchAll(/<h2 id="([^"]+)">([^<]+)<\/h2>/g)];
     const image = post.image ? { ...post.image, url: `${profile.website}${post.image.path}` } : undefined;
     const page = documentPage({
-      page: 'blog', blog: true, title: `${post.title} — ${profile.shortName}`,
+      page: 'blog', blog: true, title: `${post.title} - ${profile.shortName}`,
       description: post.description, canonical, image,
       article: { author: profile.shortName, published: post.date },
       structuredData: {
@@ -77,7 +77,7 @@ export async function generateBlog(root, profile) {
   }
 
   await writeFile(new URL('blog/index.html', root), documentPage({
-    page: 'blog', blog: true, title: `Blog — ${profile.shortName} | Engineering notes`,
+    page: 'blog', blog: true, title: `Blog - ${profile.shortName} | Engineering notes`,
     description: 'Notes on AI-native software engineering, building AI applications and learning through the work.',
     canonical: `${profile.website}/blog/`,
     body: `<section class="hero section-grid blog-intro" aria-labelledby="blog-heading"><div class="section-label"><span class="file-icon" aria-hidden="true">#</span> blog</div><div class="section-content"><p class="location">Engineering notes</p><h1 id="blog-heading">Learning in public<span class="name-period">.</span></h1><p class="hero-perspective">Notes on building software with AI, the decisions behind it and what I’m learning along the way.</p></div></section>
