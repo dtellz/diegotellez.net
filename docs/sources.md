@@ -26,6 +26,12 @@ The supplied screenshot of the OpenAI API beta invitation is included unchanged 
 
 The discussion of fundamentals, judgment and ownership expresses Diego’s engineering perspective. It does not quote or attribute an official skills ranking to Amazon. The post contains no invented project anecdotes, productivity measurements or employment outcomes.
 
+## Social preview
+
+`assets/images/social/og-diego-tellez-v1.png` was created with the built-in image generation tool using the site’s D/prompt favicon as a visual reference. It was exported at 1200 × 630 for social sharing. The exact prompt is in `docs/social-image-prompt.txt`. The image contains the name, engineering role and domain supplied by Diego, with the site’s established palette and mark.
+
+The shared metadata follows the [Open Graph protocol](https://ogp.me/). The image dimensions are close to the 1.91:1 ratio documented in [LinkedIn’s link-sharing specifications](https://www.linkedin.com/help/linkedin/answer/a521928/image-specifications-for-your-linkedin-pages-and-career-page). Rendering and cropping remain controlled by each social platform.
+
 ## Explicit constraints
 
 - Primary narrative: AI-native software engineering, distributed systems, applied AI, technical judgment, verification and ownership of product outcomes. Independent products provide concrete supporting evidence; game development is retained in the complete career history.

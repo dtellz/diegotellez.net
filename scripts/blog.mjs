@@ -1,5 +1,5 @@
 import { readFile, writeFile, mkdir, rm } from 'node:fs/promises';
-import { documentPage, esc } from './layout.mjs';
+import { documentPage, defaultSocialImage, esc } from './layout.mjs';
 
 const postPath = post => `/blog/${post.slug}/`;
 const displayDate = date => new Intl.DateTimeFormat('en-GB', {
@@ -49,17 +49,19 @@ export async function generateBlog(root, profile) {
   for (const post of posts) {
     const canonical = `${profile.website}${postPath(post)}`;
     const headings = [...post.body.matchAll(/<h2 id="([^"]+)">([^<]+)<\/h2>/g)];
-    const image = post.image ? { ...post.image, url: `${profile.website}${post.image.path}` } : undefined;
+    const socialImage = post.socialImage
+      ? { ...post.socialImage, url: new URL(post.socialImage.path, profile.website).href }
+      : defaultSocialImage;
     const page = documentPage({
       page: 'blog', blog: true, title: `${post.title} - ${profile.shortName}`,
-      description: post.description, canonical, image,
+      description: post.description, canonical, socialImage,
       article: { author: profile.shortName, published: post.date },
       structuredData: {
         '@context': 'https://schema.org', '@type': 'BlogPosting', headline: post.title,
         description: post.description, datePublished: post.date, dateModified: post.date,
         author: { '@type': 'Person', name: profile.name, url: profile.website },
         mainEntityOfPage: { '@type': 'WebPage', '@id': canonical }, url: canonical,
-        image: image ? [image.url] : undefined, inLanguage: 'en', wordCount: post.wordCount
+        image: [socialImage.url], inLanguage: 'en', wordCount: post.wordCount
       },
       body: `<article class="blog-post" aria-labelledby="post-heading">
         <header class="section-grid post-header"><div class="section-label"><a href="/blog/">← All posts</a></div><div class="section-content">

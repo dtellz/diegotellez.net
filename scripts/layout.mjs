@@ -1,8 +1,15 @@
 export const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const pdfPath = '/assets/Diego-Tellez-CV.pdf';
+export const defaultSocialImage = {
+  url: 'https://diegotellez.net/assets/images/social/og-diego-tellez-v1.png',
+  width: 1200,
+  height: 630,
+  type: 'image/png',
+  alt: 'Diego Téllez, AI-native software engineer. Systems. Judgment. Ownership. Sage D command-prompt mark on charcoal.'
+};
 export const downloadLink = (className = '') => `<a${className ? ` class="${esc(className)}"` : ''} href="${pdfPath}" download="Diego-Tellez-CV.pdf" type="application/pdf">Download CV · PDF <span aria-hidden="true">↓</span></a>`;
 
-export function documentHead({ title, description, canonical, resume = false, blog = false, noindex = false, redirect, person, structuredData, article, image }) {
+export function documentHead({ title, description, canonical, resume = false, blog = false, noindex = false, redirect, person, structuredData, article, socialImage = defaultSocialImage }) {
   const schema = structuredData ?? person;
   return `<head>
   <meta charset="utf-8">
@@ -17,9 +24,20 @@ export function documentHead({ title, description, canonical, resume = false, bl
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
   <meta property="og:type" content="${article ? 'article' : 'website'}">
+  <meta property="og:site_name" content="Diego Téllez">
   ${canonical ? `<meta property="og:url" content="${esc(canonical)}">` : ''}
   ${article ? `<meta name="author" content="${esc(article.author)}"><meta property="article:published_time" content="${esc(article.published)}">` : ''}
-  ${image ? `<meta property="og:image" content="${esc(image.url)}"><meta property="og:image:width" content="${esc(image.width)}"><meta property="og:image:height" content="${esc(image.height)}"><meta property="og:image:alt" content="${esc(image.alt)}"><meta name="twitter:card" content="summary_large_image">` : ''}
+  <meta property="og:image" content="${esc(socialImage.url)}">
+  <meta property="og:image:secure_url" content="${esc(socialImage.url)}">
+  <meta property="og:image:type" content="${esc(socialImage.type)}">
+  <meta property="og:image:width" content="${esc(socialImage.width)}">
+  <meta property="og:image:height" content="${esc(socialImage.height)}">
+  <meta property="og:image:alt" content="${esc(socialImage.alt)}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${esc(title)}">
+  <meta name="twitter:description" content="${esc(description)}">
+  <meta name="twitter:image" content="${esc(socialImage.url)}">
+  <meta name="twitter:image:alt" content="${esc(socialImage.alt)}">
   <link rel="icon" href="/assets/favicon.ico?v=2" sizes="16x16 32x32 48x48" type="image/x-icon">
   <link rel="icon" href="/assets/favicon.svg?v=2" sizes="any" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/landing.css">

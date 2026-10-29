@@ -36,6 +36,8 @@ PDF links download the original CV directly. The site has no game renderer or do
 
 The favicon is a geometric D with a command-prompt cutout in the site’s sage and charcoal colors. `assets/favicon.svg` is the vector master; `assets/favicon.ico` contains 16px, 32px and 48px fallbacks. All pages reference both through the shared layout.
 
+The shared social preview is `assets/images/social/og-diego-tellez-v1.png`, a 1200 × 630 PNG. `defaultSocialImage` in `scripts/layout.mjs` supplies its absolute URL, dimensions and alt text to Open Graph and X/Twitter metadata on every page. Use a new versioned filename when replacing it to avoid stale image caches. The generation brief is recorded in `docs/social-image-prompt.txt`.
+
 Replace `assets/Diego-Tellez-CV.pdf` when the original CV changes. The build copies this file without modifying or regenerating it.
 
 ## Write a blog post
@@ -43,6 +45,8 @@ Replace `assets/Diego-Tellez-CV.pdf` when the original CV changes. The build cop
 Add an entry to `content/posts.json` with a unique slug, title, description, publication date and HTML body path relative to `content/`. Write the body in `content/posts/` using paragraphs and `h2` headings with unique IDs. These headings generate the article’s contents navigation. Keep the source HTML trusted: it is rendered directly.
 
 Optional image metadata supplies its public path, dimensions, alt text and caption. Place `<!-- post:figure -->` in the body where the image should appear. Store article images in `assets/images/blog/`.
+
+Inline article images do not replace the shared social preview. To give a post a dedicated preview, add `socialImage` metadata with `path`, `width`, `height`, `type` and `alt`; the path is resolved against the site URL. Its image is used for both sharing tags and the article’s structured data.
 
 Run `npm run build` to generate `/blog/`, each article page and the latest-post preview on the homepage. Reading times, article metadata and sitemap entries come from the same post data. Shared blog styles are in `assets/css/blog.css`. Edit source content rather than the generated pages in `blog/`.
 
