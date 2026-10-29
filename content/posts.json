@@ -13,5 +13,36 @@
       "alt": "Email dated 23 November 2021 welcoming Diego to the OpenAI API beta with access to Codex and GPT-3. The recipient address is partly redacted.",
       "caption": "My invitation to the Codex and GPT-3 API beta, 23 November 2021."
     }
+  },
+  {
+    "slug": "how-i-used-ai-to-train-for-my-first-open-water-podium",
+    "title": "How I Used AI to Train for My First Open-Water Podium",
+    "description": "From swimming to stay active after a back injury to third place in Masters 30 at Blue Arico. What helped, what went wrong and why this was much more than asking a chatbot for a training plan.",
+    "date": "2026-10-15",
+    "body": "posts/how-i-used-ai-to-train-for-my-first-open-water-podium.html",
+    "tags": ["Applied AI", "Open-water swimming", "Training"],
+    "images": {
+      "podium": {
+        "path": "/assets/images/blog/blue-arico-masters-30-podium.jpg",
+        "width": 1609,
+        "height": 1261,
+        "alt": "Three swimmers on the Blue Arico podium, with the third-place swimmer raising his trophy overhead.",
+        "caption": "Third place in Masters 30 at Blue Arico."
+      },
+      "trophy": {
+        "path": "/assets/images/blog/blue-arico-trophy-and-finisher-medal.jpg",
+        "width": 998,
+        "height": 1224,
+        "alt": "Blue Arico trophy marked third place in Masters 30 men beside a finisher medal, both decorated with a red-and-white lighthouse.",
+        "caption": "The Masters 30 third-place trophy and Blue Arico finisher medal."
+      }
+    },
+    "socialImage": {
+      "path": "/assets/images/blog/blue-arico-masters-30-podium.jpg",
+      "width": 1609,
+      "height": 1261,
+      "type": "image/jpeg",
+      "alt": "The Masters 30 podium at Blue Arico, with the third-place swimmer raising his trophy."
+    }
   }
 ]

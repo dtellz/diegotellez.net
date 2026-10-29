@@ -23,6 +23,11 @@
 .post-prose ul, .post-prose ol { padding-left: 23px; margin: 23px 0; }
 .post-prose li { padding-left: 5px; margin-bottom: 10px; }
 .post-prose li::marker { color: var(--muted); }
+.post-prose table { width: 100%; margin: 28px 0; border-collapse: collapse; font-size: 15px; line-height: 1.6; }
+.post-prose th, .post-prose td { padding: 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.post-prose thead th { color: var(--ink); font: 12px/1.6 var(--mono); }
+.post-prose tbody th { font-weight: 400; }
+.post-prose th:last-child, .post-prose td:last-child { text-align: right; }
 .post-figure { margin: 32px 0 37px; }
 .post-figure > a { display: block; }
 .post-figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); background: #fff; }

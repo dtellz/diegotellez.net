@@ -31,13 +31,16 @@ export async function generateBlog(root, profile) {
     }
     slugs.add(post.slug);
     const source = await readFile(new URL(`content/${post.body}`, root), 'utf8');
-    const figure = post.image ? `<figure class="post-figure">
-      <a href="${esc(post.image.path)}" target="_blank" rel="noopener" aria-label="Open the beta invitation screenshot at full size">
-        <img src="${esc(post.image.path)}" width="${post.image.width}" height="${post.image.height}" alt="${esc(post.image.alt)}" loading="lazy" decoding="async">
-      </a>
-      <figcaption>${esc(post.image.caption)} <a href="${esc(post.image.path)}" target="_blank" rel="noopener">View full size <span aria-hidden="true">↗</span></a></figcaption>
-    </figure>` : '';
-    const body = source.replace('<!-- post:figure -->', figure);
+    const body = source.replace(/<!-- post:figure(?::([a-z0-9-]+))? -->/g, (_, name) => {
+      const image = name ? post.images?.[name] : post.image;
+      if (!image) throw new Error(`Missing image ${name ?? 'default'} for post: ${post.slug}`);
+      return `<figure class="post-figure">
+        <a href="${esc(image.path)}" target="_blank" rel="noopener">
+          <img src="${esc(image.path)}" width="${image.width}" height="${image.height}" alt="${esc(image.alt)}" loading="lazy" decoding="async">
+        </a>
+        <figcaption>${esc(image.caption)} <a href="${esc(image.path)}" target="_blank" rel="noopener">View full size <span aria-hidden="true">↗</span></a></figcaption>
+      </figure>`;
+    });
     const wordCount = plainText(source).split(/\s+/).length;
     posts.push({ ...post, body, wordCount, minutes: Math.max(1, Math.ceil(wordCount / 220)) });
   }
