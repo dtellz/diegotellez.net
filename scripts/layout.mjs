@@ -2,7 +2,8 @@ export const esc = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;'
 export const pdfPath = '/assets/Diego-Tellez-CV.pdf';
 export const downloadLink = (className = '') => `<a${className ? ` class="${esc(className)}"` : ''} href="${pdfPath}" download="Diego-Tellez-CV.pdf" type="application/pdf">Download CV · PDF <span aria-hidden="true">↓</span></a>`;
 
-export function documentHead({ title, description, canonical, resume = false, noindex = false, redirect, person }) {
+export function documentHead({ title, description, canonical, resume = false, blog = false, noindex = false, redirect, person, structuredData, article, image }) {
+  const schema = structuredData ?? person;
   return `<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,26 +16,30 @@ export function documentHead({ title, description, canonical, resume = false, no
   ${redirect ? `<meta http-equiv="refresh" content="0; url=${esc(redirect)}">` : ''}
   <meta property="og:title" content="${esc(title)}">
   <meta property="og:description" content="${esc(description)}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="${article ? 'article' : 'website'}">
   ${canonical ? `<meta property="og:url" content="${esc(canonical)}">` : ''}
+  ${article ? `<meta name="author" content="${esc(article.author)}"><meta property="article:published_time" content="${esc(article.published)}">` : ''}
+  ${image ? `<meta property="og:image" content="${esc(image.url)}"><meta property="og:image:width" content="${esc(image.width)}"><meta property="og:image:height" content="${esc(image.height)}"><meta property="og:image:alt" content="${esc(image.alt)}"><meta name="twitter:card" content="summary_large_image">` : ''}
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/css/landing.css">
   ${resume ? '<link rel="stylesheet" href="/assets/css/resume.css">' : ''}
+  ${blog ? '<link rel="stylesheet" href="/assets/css/blog.css">' : ''}
   <link rel="alternate" type="application/json" href="/.well-known/profile.json" title="Structured professional profile">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="Machine-readable profile">
   <script>try{const theme=localStorage.getItem('dt-theme');if(theme==='light'||theme==='dark')document.documentElement.dataset.theme=theme;}catch{}</script>
-  ${person ? `<script type="application/ld+json">${JSON.stringify(person).replace(/</g, '\\u003c')}</script>` : ''}
+  ${schema ? `<script type="application/ld+json">${JSON.stringify(schema).replace(/</g, '\\u003c')}</script>` : ''}
   <script type="module" src="/assets/js/landing.js"></script>
 </head>`.split('\n').filter(line => line.trim()).join('\n');
 }
 
-export function siteHeader(page = 'home') {
+export function siteHeader(page = 'home', isArticle = false) {
   return `<header class="site-header">
       <a class="identity" href="/" aria-label="Diego Téllez, home"><span class="prompt" aria-hidden="true">&gt;</span> dtellz<span class="path"> / ${esc(page)}</span></a>
       <nav aria-label="Main navigation">
         <a href="/#work">work</a>
         <a href="/#approach">approach</a>
         <a href="/#about">about</a>
+        <a href="/blog/"${page === 'blog' ? ` aria-current="${isArticle ? 'location' : 'page'}"` : ''}>blog</a>
         <a href="/resume/"${page === 'résumé' ? ' aria-current="page"' : ''}>résumé <span aria-hidden="true">↗</span></a>
       </nav>
       <button class="theme-toggle" type="button" aria-label="Use light theme" hidden>
@@ -55,7 +60,7 @@ ${documentHead(head)}
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page-shell">
-    ${siteHeader(page)}
+    ${siteHeader(page, Boolean(head.article))}
     <main id="main">${body}</main>
     ${siteFooter()}
   </div>

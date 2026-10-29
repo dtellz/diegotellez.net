@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111313">
+  <meta name="color-scheme" content="dark light">
+  <title>From the Codex beta to AI-native engineering — Diego Téllez</title>
+  <meta name="description" content="How my work evolved from debugging snippets in a browser to directing agents, building AI applications and taking on larger engineering challenges.">
+  <link rel="canonical" href="https://diegotellez.net/blog/from-codex-beta-to-ai-native-engineering/">
+  <meta property="og:title" content="From the Codex beta to AI-native engineering — Diego Téllez">
+  <meta property="og:description" content="How my work evolved from debugging snippets in a browser to directing agents, building AI applications and taking on larger engineering challenges.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://diegotellez.net/blog/from-codex-beta-to-ai-native-engineering/">
+  <meta name="author" content="Diego Téllez"><meta property="article:published_time" content="2026-10-28">
+  <meta property="og:image" content="https://diegotellez.net/assets/images/blog/openai-api-beta-invitation-2021.png"><meta property="og:image:width" content="1790"><meta property="og:image:height" content="1168"><meta property="og:image:alt" content="Email dated 23 November 2021 welcoming Diego to the OpenAI API beta with access to Codex and GPT-3. The recipient address is partly redacted."><meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/landing.css">
+  <link rel="stylesheet" href="/assets/css/blog.css">
+  <link rel="alternate" type="application/json" href="/.well-known/profile.json" title="Structured professional profile">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="Machine-readable profile">
+  <script>try{const theme=localStorage.getItem('dt-theme');if(theme==='light'||theme==='dark')document.documentElement.dataset.theme=theme;}catch{}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"From the Codex beta to AI-native engineering","description":"How my work evolved from debugging snippets in a browser to directing agents, building AI applications and taking on larger engineering challenges.","datePublished":"2026-10-28","dateModified":"2026-10-28","author":{"@type":"Person","name":"Diego Téllez Barrero","url":"https://diegotellez.net"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://diegotellez.net/blog/from-codex-beta-to-ai-native-engineering/"},"url":"https://diegotellez.net/blog/from-codex-beta-to-ai-native-engineering/","image":["https://diegotellez.net/assets/images/blog/openai-api-beta-invitation-2021.png"],"inLanguage":"en","wordCount":1272}</script>
+  <script type="module" src="/assets/js/landing.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="identity" href="/" aria-label="Diego Téllez, home"><span class="prompt" aria-hidden="true">&gt;</span> dtellz<span class="path"> / blog</span></a>
+      <nav aria-label="Main navigation">
+        <a href="/#work">work</a>
+        <a href="/#approach">approach</a>
+        <a href="/#about">about</a>
+        <a href="/blog/" aria-current="location">blog</a>
+        <a href="/resume/">résumé <span aria-hidden="true">↗</span></a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Use light theme" hidden>
+        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 14.5A9 9 0 0 1 9.5 3.5a9 9 0 1 0 11 11Z"/></svg>
+      </button>
+    </header>
+    <main id="main"><article class="blog-post" aria-labelledby="post-heading">
+        <header class="section-grid post-header"><div class="section-label"><a href="/blog/">← All posts</a></div><div class="section-content">
+          <p class="writing-meta"><time datetime="2026-10-28">28 October 2026</time><span aria-hidden="true">/</span><span>6 min read</span></p>
+          <h1 id="post-heading">From the Codex beta to AI-native engineering</h1>
+          <p class="post-deck">How my work evolved from debugging snippets in a browser to directing agents, building AI applications and taking on larger engineering challenges.</p>
+          <p class="post-author">By <a href="/#about" rel="author">Diego Téllez</a></p>
+        </div></header>
+        <div class="section-grid post-layout"><aside class="post-sidebar"><nav class="post-toc" aria-label="In this post"><p>In this post</p><a href="#from-conversations-to-delegation">From conversations to delegation</a><a href="#taking-on-larger-challenges">Taking on larger challenges</a><a href="#building-ai-in-production">Building AI in production</a><a href="#what-i-own">What I own when an agent writes code</a><a href="#fundamentals-and-judgment">Investing in fundamentals and judgment</a><a href="#committing-through-uncertainty">Committing through uncertainty</a></nav></aside><div class="post-prose"><p>On 23 November 2021, I received an invitation to OpenAI’s API beta with access to Codex and GPT-3. I still have the email. Looking at it now, I can trace a journey that has changed how I learn, build software and think about my responsibility as an engineer.</p>
+<p>It happened gradually. I started by asking AI for help with difficult code. Today I work with agents across hosted and local models, giving them increasingly substantial tasks. Along the way, I have also built AI applications professionally. Both experiences shape what being an AI-native software engineer means to me.</p>
+
+<figure class="post-figure">
+      <a href="/assets/images/blog/openai-api-beta-invitation-2021.png" target="_blank" rel="noopener" aria-label="Open the beta invitation screenshot at full size">
+        <img src="/assets/images/blog/openai-api-beta-invitation-2021.png" width="1790" height="1168" alt="Email dated 23 November 2021 welcoming Diego to the OpenAI API beta with access to Codex and GPT-3. The recipient address is partly redacted." loading="lazy" decoding="async">
+      </a>
+      <figcaption>My invitation to the Codex and GPT-3 API beta, 23 November 2021. <a href="/assets/images/blog/openai-api-beta-invitation-2021.png" target="_blank" rel="noopener">View full size <span aria-hidden="true">↗</span></a></figcaption>
+    </figure>
+
+<h2 id="from-conversations-to-delegation">From conversations to delegation</h2>
+<p>The 2021 invitation was for API access. The browser conversations that became an important part of my development workflow came later. I would bring a problematic snippet or a complex issue into the browser, work through possible explanations and take the result back into my development environment. The scope was small and I was doing most of the work around the conversation.</p>
+<p>There was value in having something to question, ask for an explanation or use to explore another approach. I still had to decide what to bring into the conversation, what information was missing and whether the answer actually made sense. The quality of the exchange depended heavily on how well I understood the problem.</p>
+<p>Cursor was my next step, followed by Windsurf. As AI became more integrated into my development environment, I started handing over larger pieces of work. Then came Claude Code and later Codex. My role in the interaction changed: I was increasingly defining a task, giving an agent context and reviewing changes across the codebase.</p>
+<p>Each step involved granting more responsibility and learning how to supervise it. I had to become clearer about scope, constraints and the evidence I needed before accepting a result. Switching tools also became a way to learn quickly: try a different workflow, see where it helped and carry the useful habits forward.</p>
+<p>Today I work with Claude Code and Codex. I also run local models through oMLX on my MacBook Pro, connecting them to Claude Code and the Pi coding agent. Exploring what I can do on my own hardware is a particularly exciting part of this stage. My setup keeps evolving as I learn what each combination is useful for.</p>
+
+<h2 id="taking-on-larger-challenges">Taking on larger challenges</h2>
+<p>One of the biggest changes has been the scope of work I feel able to take on. With agents helping me investigate unfamiliar areas and work through implementation, I have gradually faced larger challenges while growing the understanding needed to own them. Problems that once felt difficult to approach alone have become things I can break down, explore and work through.</p>
+<p>That has made learning more immediate. I can ask for an explanation, inspect the code and follow a question further while working on a real problem. To benefit from that, I have to stay engaged. Accepting a result without understanding the relevant decisions would leave a gap in my ability to maintain it. The work needs to expand my own understanding as well as produce software.</p>
+<p>I am learning how to manage that increased scope without losing clarity. More parallel activity creates more results to review and more opportunities for inconsistent assumptions. Clear boundaries, shared context and deliberate integration become part of the engineering work.</p>
+
+<h2 id="building-ai-in-production">Building AI in production</h2>
+<p>My professional involvement with AI also includes building applications where AI is part of the product itself. I have developed and deployed NLP, generative AI and retrieval-augmented generation applications, along with the backend services and APIs that make those capabilities available to users.</p>
+<p>I have built FastAPI endpoints exposing models and worked on automated training, validation and serving pipelines. I have worked with PostgreSQL and vector stores, then deployed and monitored services using AWS, Docker and Kubernetes. Those responsibilities connect model behavior to the rest of a software system.</p>
+<p>That work has given me experience on both sides: using AI to engineer software and engineering the systems that make AI useful. It influences how I approach coding agents. I think about the inputs they receive, the assumptions in their output and the checks around their work. I also think about the surrounding product: who needs it, how it behaves when something fails and what it costs to keep running.</p>
+
+<h2 id="what-i-own">What I own when an agent writes code</h2>
+<p>As I have delegated more implementation, defining the task has become a larger part of my work. A technically sound change can still solve the wrong problem. Understanding the user, the business constraints and what success looks like gives me a basis for deciding what an agent should actually do.</p>
+<p>I then have to make architectural decisions that will outlast the current task. Where should this behavior live? What data does it need? How does it fail? What existing component could do the job? These decisions shape the instructions I give an agent and the standard I use to review its work.</p>
+<p>Verification is part of that responsibility. I need to understand the change, check its assumptions and choose tests that could expose a meaningful failure. Security, data handling and operational behavior deserve attention proportional to the risk. A passing test suite is useful evidence, but I still need to know what it covers.</p>
+<p>The same applies when something breaks. I want to trace the behavior back to its cause and understand why a proposed fix addresses it. An agent can help investigate. I remain responsible for deciding whether the explanation is supported and whether the fix creates another problem elsewhere.</p>
+
+<h2 id="fundamentals-and-judgment">Investing in fundamentals and judgment</h2>
+<p>This way of working gives me more reasons to study systems. Databases, networking, concurrency and distributed systems provide the knowledge I need to evaluate a design. Without that understanding, I would have fewer ways to challenge a plausible answer or recognize a subtle failure.</p>
+<p>Problem decomposition has become an everyday skill. Giving an agent a useful task means identifying a coherent piece of work, providing the relevant context and explaining how it will be evaluated. It also means noticing when the problem is still too ambiguous to delegate. Sometimes the next useful step is a conversation with a person or a closer look at the existing system. Knowing when AI adds little value is part of the judgment.</p>
+<p>Technical judgment includes deciding how much complexity the situation justifies. I want to be able to explain why a design meets the current need, what its limits are and what would cause us to revisit it. That explanation matters to teammates who will maintain the system as much as it matters during implementation.</p>
+
+<h2 id="committing-through-uncertainty">Committing through uncertainty</h2>
+<p>I am excited by what I can build today and by what might become possible next. I am all in on learning to work this way. At the same time, professional stability matters to me. Changes this fast bring uncertainty about roles, hiring and what teams will expect from engineers. I cannot confidently predict how the job market will look several years from now.</p>
+<p>I expect the capabilities of agents to keep changing, including in areas such as architecture and debugging. I do not want my career plan to depend on a fixed boundary around what they can do. I would rather keep learning through direct use and reassess my approach as the evidence changes.</p>
+<p>My response is to keep participating: build with the tools, learn their limits and adapt as they change. I bring direct experience developing AI applications, a habit of learning new workflows and a commitment to understanding what I ship. I’m excited to bring that experience to a team working on problems that matter.</p>
+</div></div>
+        <footer class="section-grid post-end"><div class="section-label">/ continue</div><div class="section-content"><p>I’m interested in working with people building useful AI products and dependable systems.</p><div class="hero-links"><a class="primary-link" href="mailto:contact@diegotellez.net">Get in touch <span aria-hidden="true">↗</span></a><a href="/resume/">Read my résumé <span aria-hidden="true">↗</span></a><a href="/blog/">All posts <span aria-hidden="true">→</span></a></div></div></footer>
+      </article></main>
+    <footer class="site-footer"><span>© <span data-year>2026</span> Diego Téllez</span><a href="/assets/Diego-Tellez-CV.pdf" download="Diego-Tellez-CV.pdf" type="application/pdf">Download CV · PDF <span aria-hidden="true">↓</span></a><a href="#main">Back to top <span aria-hidden="true">↑</span></a></footer>
+  </div>
+</body>
+</html>

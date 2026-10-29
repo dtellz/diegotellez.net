@@ -18,6 +18,7 @@ Senior software engineer working across distributed systems, applied AI, cloud i
 - [Readable résumé](https://diegotellez.net/resume/): Equivalent career information in accessible HTML.
 - [Download CV (PDF)](https://diegotellez.net/assets/Diego-Tellez-CV.pdf): Original CV, available directly.
 - [Portfolio](https://diegotellez.net/): Selected work and contact.
+- [Blog](https://diegotellez.net/blog/): First-person notes on AI-native engineering and professional experience.
 - [GitHub](https://github.com/dtellz)
 - [LinkedIn](https://www.linkedin.com/in/diegotellezbarrero/)
 - [Echoes of the Cove](https://echoesofthecove.com)

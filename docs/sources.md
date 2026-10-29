@@ -18,6 +18,14 @@ Presentation updated at Diego’s request: the landing design applies across the
 
 The supplied `Diego_Tellez_CV.pdf` is copied byte-for-byte into the website at `/assets/Diego-Tellez-CV.pdf` and is available through a normal download link. It has not been reauthored, restyled or altered to match the updated site text. Its SHA-256 is recorded in the README.
 
+## Blog
+
+“From the Codex beta to AI-native engineering” is based on Diego’s first-person account supplied on 28 October 2026. The progression through browser conversations, Cursor, Windsurf, Claude Code, Codex and local models via oMLX with Claude Code and Pi comes from that account. Production AI examples come from the supplied professional profile and omit employer names.
+
+The supplied screenshot of the OpenAI API beta invitation is included unchanged as `assets/images/blog/openai-api-beta-invitation-2021.png`. It shows an invitation dated 23 November 2021 with access to Codex and GPT-3. It supports the invitation date, not a claim of employment or endorsement. The article distinguishes that invitation from the later browser-based workflow. The recipient address is partly redacted in the supplied image.
+
+The discussion of fundamentals, judgment and ownership expresses Diego’s engineering perspective. It does not quote or attribute an official skills ranking to Amazon. The post contains no invented project anecdotes, productivity measurements or employment outcomes.
+
 ## Explicit constraints
 
 - Primary narrative: AI-native software engineering, distributed systems, applied AI, technical judgment, verification and ownership of product outcomes. Independent products provide concrete supporting evidence; game development is retained in the complete career history.

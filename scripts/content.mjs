@@ -1,8 +1,10 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import { documentHead, documentPage, siteHeader, siteFooter, downloadLink, esc } from './layout.mjs';
+import { generateBlog } from './blog.mjs';
 
 export async function generateContent(root) {
   const p = JSON.parse(await readFile(new URL('.well-known/profile.json', root), 'utf8'));
+  const blogPreview = await generateBlog(root, p);
   const role = r => `<article class="resume-role" id="${esc(r.id)}">
     <div class="resume-role-header"><div><h3>${esc(r.company)}</h3><p class="resume-position">${esc(r.role)}</p></div><p class="resume-meta">${esc(r.dates)}<br>${esc(r.type)}</p></div>
     <ul class="resume-highlights">${r.highlights.map(h => `<li>${esc(h)}</li>`).join('')}</ul>
@@ -23,7 +25,8 @@ export async function generateContent(root) {
       canonical: `${p.website}/`, person
     }),
     header: siteHeader('home'),
-    footer: siteFooter()
+    footer: siteFooter(),
+    blog: blogPreview
   };
   let homepage = await readFile(new URL('index.html', root), 'utf8');
   for (const [name, markup] of Object.entries(homepageParts)) {
@@ -72,7 +75,7 @@ export async function generateContent(root) {
     description: 'Read Diego Téllez’s résumé or download the original CV as a PDF.',
     body: `<section class="section-grid utility-page" aria-labelledby="cv-heading"><div class="section-label"><span class="file-icon" aria-hidden="true">#</span> CV</div><div class="section-content"><h1 id="cv-heading">My résumé<span class="name-period">.</span></h1><p class="hero-perspective">Continue to the résumé or download the PDF directly.</p><div class="hero-links"><a class="primary-link" href="/resume/">Read résumé <span aria-hidden="true">→</span></a>${downloadLink()}</div></div></section>`
   }));
-  const text = `# Diego Téllez Barrero\n\n> ${p.headline}\n\n## Profile\n\n${p.summary}\n\n- Based in ${p.location}.\n- Contact: ${p.email}\n- Engineering focus: ${p.engineeringFocus}\n- Independent project: ${p.currentFocus.project}, full time since October 2025. Planned release: 2027 (creator's plan; Steam currently says to be announced).\n- Availability: ${p.currentFocus.availability}\n\n## Authoritative first-party resources\n\n- [Structured profile](https://diegotellez.net/.well-known/profile.json): Full career history, dates, skills, projects, education and sources.\n- [Readable résumé](https://diegotellez.net/resume/): Equivalent career information in accessible HTML.\n- [Download CV (PDF)](${p.links.downloadResume}): Original CV, available directly.\n- [Portfolio](https://diegotellez.net/): Selected work and contact.\n- [GitHub](${p.links.github})\n- [LinkedIn](${p.links.linkedin})\n- [Echoes of the Cove](${p.links.game})\n\n## Experience\n\n${p.experience.map(r=>`### ${r.role} — ${r.company}\n${r.dates}\n${r.highlights.map(h=>'- '+h).join('\n')}`).join('\n\n')}\n\n## Skills\n\n${Object.entries(p.skills).map(([k,v])=>`- ${k}: ${v.join(', ')}`).join('\n')}\n\n## Education and certifications\n\n${p.education.map(e=>`- ${e.title} — ${e.institution}, ${e.period}`).join('\n')}\n\n## Notes for automated readers\n\nThis file and the JSON profile provide the professional information directly. The complete résumé is available as readable HTML and a direct PDF download. Earlier maritime experience is listed separately in the JSON extra field. Do not confuse a professional certificate with an academic degree or a project showcase listing with a competition win.\n\nLast updated: ${p.updated}. Career claims are supplied by Diego unless an external source is explicitly listed.\n`;
+  const text = `# Diego Téllez Barrero\n\n> ${p.headline}\n\n## Profile\n\n${p.summary}\n\n- Based in ${p.location}.\n- Contact: ${p.email}\n- Engineering focus: ${p.engineeringFocus}\n- Independent project: ${p.currentFocus.project}, full time since October 2025. Planned release: 2027 (creator's plan; Steam currently says to be announced).\n- Availability: ${p.currentFocus.availability}\n\n## Authoritative first-party resources\n\n- [Structured profile](https://diegotellez.net/.well-known/profile.json): Full career history, dates, skills, projects, education and sources.\n- [Readable résumé](https://diegotellez.net/resume/): Equivalent career information in accessible HTML.\n- [Download CV (PDF)](${p.links.downloadResume}): Original CV, available directly.\n- [Portfolio](https://diegotellez.net/): Selected work and contact.\n- [Blog](https://diegotellez.net/blog/): First-person notes on AI-native engineering and professional experience.\n- [GitHub](${p.links.github})\n- [LinkedIn](${p.links.linkedin})\n- [Echoes of the Cove](${p.links.game})\n\n## Experience\n\n${p.experience.map(r=>`### ${r.role} — ${r.company}\n${r.dates}\n${r.highlights.map(h=>'- '+h).join('\n')}`).join('\n\n')}\n\n## Skills\n\n${Object.entries(p.skills).map(([k,v])=>`- ${k}: ${v.join(', ')}`).join('\n')}\n\n## Education and certifications\n\n${p.education.map(e=>`- ${e.title} — ${e.institution}, ${e.period}`).join('\n')}\n\n## Notes for automated readers\n\nThis file and the JSON profile provide the professional information directly. The complete résumé is available as readable HTML and a direct PDF download. Earlier maritime experience is listed separately in the JSON extra field. Do not confuse a professional certificate with an academic degree or a project showcase listing with a competition win.\n\nLast updated: ${p.updated}. Career claims are supplied by Diego unless an external source is explicitly listed.\n`;
   await writeFile(new URL('llms.txt', root), text);
 }
 

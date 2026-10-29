@@ -1,0 +1,17 @@
+[
+  {
+    "slug": "from-codex-beta-to-ai-native-engineering",
+    "title": "From the Codex beta to AI-native engineering",
+    "description": "How my work evolved from debugging snippets in a browser to directing agents, building AI applications and taking on larger engineering challenges.",
+    "date": "2026-10-28",
+    "body": "posts/from-codex-beta-to-ai-native-engineering.html",
+    "tags": ["AI-native engineering", "Career", "Applied AI"],
+    "image": {
+      "path": "/assets/images/blog/openai-api-beta-invitation-2021.png",
+      "width": 1790,
+      "height": 1168,
+      "alt": "Email dated 23 November 2021 welcoming Diego to the OpenAI API beta with access to Codex and GPT-3. The recipient address is partly redacted.",
+      "caption": "My invitation to the Codex and GPT-3 API beta, 23 November 2021."
+    }
+  }
+]
