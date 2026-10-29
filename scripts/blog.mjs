@@ -42,7 +42,7 @@ export async function generateBlog(root, profile) {
       </figure>`;
     });
     const wordCount = plainText(source).split(/\s+/).length;
-    posts.push({ ...post, body, wordCount, minutes: Math.max(1, Math.ceil(wordCount / 220)) });
+    posts.push({ ...post, body, wordCount, minutes: Math.max(1, Math.ceil(wordCount / 270)) });
   }
   posts.sort((a, b) => b.date.localeCompare(a.date));
   // blog/ contains generated pages only; retired slugs must not remain published.
