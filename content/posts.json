@@ -7,9 +7,9 @@
     "body": "posts/building-a-game-engine-and-a-commercial-game-on-top-of-it.html",
     "tags": ["Game development", "Engine architecture", "Performance"],
     "image": {
-      "path": "/assets/images/blog/harbor-profile-02.png",
-      "width": 3456,
-      "height": 2166,
+      "path": "/assets/images/social/harbor-profile-02-v1.jpg",
+      "width": 1609,
+      "height": 1008,
       "alt": "The in-game profiler showing harbor frame timings, allocations and map-wide entity counts.",
       "caption": "The in-game profiler showing harbor frame timings, allocations and map-wide entity counts."
     },
