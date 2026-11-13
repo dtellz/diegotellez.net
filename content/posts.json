@@ -14,10 +14,10 @@
       "caption": "The in-game profiler showing harbor frame timings, allocations and map-wide entity counts."
     },
     "socialImage": {
-      "path": "/assets/images/blog/harbor-profile-02.png",
-      "width": 3456,
-      "height": 2166,
-      "type": "image/png",
+      "path": "/assets/images/social/harbor-profile-02-v1.jpg",
+      "width": 1609,
+      "height": 1008,
+      "type": "image/jpeg",
       "alt": "Echoes of the Cove running in the harbor with the in-game performance profiler enabled."
     }
   },
