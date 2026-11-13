@@ -14,6 +14,7 @@
 .post-toc a:hover { color: var(--accent); }
 .post-prose { max-width: 74ch; min-width: 0; color: var(--body); font-size: 17px; line-height: 1.9; overflow-wrap: break-word; }
 .post-prose > p { margin-bottom: 23px; }
+.post-prose code { color: var(--ink); font: .88em var(--mono); }
 .post-prose > p:first-child { color: var(--ink); font-size: 19px; line-height: 1.8; }
 .post-prose h2 { color: var(--ink); font-size: 25px; line-height: 1.4; margin: 47px 0 20px; letter-spacing: -.03em; }
 .post-prose h3 { color: var(--ink); font-size: 20px; line-height: 1.5; margin: 28px 0 14px; }
