@@ -1,0 +1,44 @@
+<p>I started Echoes of the Cove because I love video games and had always wanted to make one. I also wanted to grow as an engineer by building something large and technically demanding on my own. The result is a 2D action RPG for Steam, still in development, with a purpose-built game engine underneath it.</p>
+
+<p>Building this solo means owning the entire chain: the runtime, the gameplay systems, the content workflow and the tools needed to understand failures. A decision in the engine becomes something I have to live with while building the game, whether that means a performance constraint, a difficult bug or a limit on how quickly I can add content.</p>
+
+<p>The foundation is C# with MonoGame and MonoGame.Extended. On top of their framework and building blocks, I built world management, combat, NPC and enemy AI, persistence, dialogue and rendering effects. The current game loads 13 maps and registers 39 monster types and variants. Its dialogue spans 111 nodes and 167 choices across 18 conversation files, with text present in all eight supported languages.</p>
+
+<p><code>Game1.cs</code> connects those systems and controls their update and rendering order. <code>MapManager</code> owns map loading and map-specific behavior, while other managers handle combat, NPCs and weather. Crossing a map boundary affects navigation, lighting, spawn areas and companions. Rendering has similar dependencies: world effects run before the HUD, with separate render targets allowing independent control of tile sampling and UI scaling.</p>
+
+<p>Those boundaries have changed as new features exposed their limits. The monument system originally had its initialization, map-change subscription and updates wired directly into <code>Game1</code>. I moved its ownership into <code>MapManager</code>, alongside hooks for map-element collisions, hazards and drawing. When I later added volcanic eggs and their spawned enemies, the map integration used those hooks without changing <code>Game1</code>. That gave the refactor a concrete payoff: the next feature needed fewer integration points in the main class.</p>
+
+<p>Save restoration makes these relationships particularly visible. NPC waypoints must exist before saved NPC state is applied. Replacing the save-state manager requires rebinding consumers that would otherwise retain the previous instance. Restoring the clock means reconnecting the systems driven by it. A new game, a reload and a restart after death all require careful handling of persistent state and the transient state that must be cleared.</p>
+
+<p>Even scheduling that work needs care. Loading originally rebuilt map renderers and material resources synchronously. I changed it to transfer compatible resources into the restored maps and rebuild their gameplay state separately. Loading advances only after another loading frame has been drawn, preventing fixed-step catch-up updates from consuming several slices before the screen refreshes. Navigation preparation runs against a collision snapshot in a background task before installation on the game thread. This removes redundant resource reconstruction on compatible reloads, although individual loading steps can still be expensive.</p>
+
+<p>Owning performance also means being able to explain it. I built an in-game monitor that separates CPU update and draw time from the interval between frame presentations, including framework waits and VSync. It records allocations, garbage collections and a rolling p99 frame time. Average FPS can hide occasional hitches, so I need to see variation as well as throughput.</p>
+
+<p>The GPU profiler uses a small ring of asynchronous timer queries. It reads completed results and skips a sample when every slot is still pending. Waiting would interfere with the workload I was trying to measure.</p>
+
+<p>For a concrete workload, I captured three stationary harbor samples from a Release build on an Apple M4 Pro with 48 GB of RAM, running macOS. Rendering was uncapped with VSync off, at an internal resolution of 1280 × 720. The map held 63 monsters, 7 NPCs and 24 animals, with 63 registered lights. Those are map-wide counts; the player was standing on the pier without combat.</p>
+
+<table>
+  <thead><tr><th scope="col">Measurement</th><th scope="col">Range across three snapshots</th></tr></thead>
+  <tbody>
+    <tr><th scope="row">Average frame interval</th><td>3.37–3.39 ms</td></tr>
+    <tr><th scope="row">p99 frame interval</th><td>8.03–8.91 ms</td></tr>
+    <tr><th scope="row">Average CPU update / draw</th><td>0.27 / 2.08–2.11 ms</td></tr>
+    <tr><th scope="row">Average scene GPU time</th><td>0.64–0.70 ms</td></tr>
+    <tr><th scope="row">Managed allocation per frame</th><td>10.6–10.9 KiB</td></tr>
+  </tbody>
+</table>
+
+<p>Each frame statistic covers the latest 120 frames, roughly 0.4 seconds here, with the overlay enabled. GPU timing covers the scene and effects, excluding UI and presentation. These snapshots describe this workload; combat, loading and lower-end hardware need separate measurements. The roughly 11 KiB allocated per frame also gives me a concrete target for further investigation.</p>
+
+<!-- post:figure -->
+
+<p>The same attention to behavior applies to small gameplay interactions. One NPC trade exchanges food for two rewards. What happens if the inventory has room for only one? The trade checks capacity before consuming anything, restores the food if reward insertion fails and marks completion only after success. Dialogue follows the result. Implementing the exchange means accounting for partial failure across inventory, progression and the conversation the player sees.</p>
+
+<p>Working toward a commercial release keeps pushing requirements back into the engine. Dialogue and quest definitions live in JSON so I can develop content separately from runtime logic. Supporting eight locales required shared font resources, regional glyph selection and language-aware line breaking, with cached layouts. These decisions affect how much content I can maintain as one person and how that content reaches players.</p>
+
+<p>That responsibility extends to delivery: scripted publish targets for Windows, macOS and Linux, plus an event-demo mode with a separate save template that resets between sessions. All of this needs attention alongside gameplay development.</p>
+
+<p>Working alone changes which trade-offs I accept. Direct references and concrete managers keep integration simple, and I can change both sides of a dependency together. There is still maintenance work: <code>Game1.cs</code> remains roughly 4,000 lines, UI conditions are repeated and shared state makes resets more delicate. Moving ownership into an existing system when a feature needs it has been a practical way to improve those boundaries while continuing to build the game.</p>
+
+<p>The game is still in development, and so is my understanding of what it needs. Building it has given me sustained responsibility for a whole product: deciding what to build, understanding how it behaves and maintaining it as the scope grows. That is where much of my growth has come from, while making the game I always wanted to create.</p>

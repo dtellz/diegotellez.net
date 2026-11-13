@@ -73,7 +73,7 @@ export async function generateBlog(root, profile) {
           <p class="post-deck">${esc(post.description)}</p>
           <p class="post-author">By <a href="/#about" rel="author">${esc(profile.shortName)}</a></p>
         </div></header>
-        <div class="section-grid post-layout"><aside class="post-sidebar"><nav class="post-toc" aria-label="In this post"><p>In this post</p>${headings.map(([, id, text]) => `<a href="#${esc(id)}">${text}</a>`).join('')}</nav></aside><div class="post-prose">${post.body}</div></div>
+        <div class="section-grid post-layout"><aside class="post-sidebar">${headings.length ? `<nav class="post-toc" aria-label="In this post"><p>In this post</p>${headings.map(([, id, text]) => `<a href="#${esc(id)}">${text}</a>`).join('')}</nav>` : ''}</aside><div class="post-prose">${post.body}</div></div>
         <footer class="section-grid post-end"><div class="section-label">/ continue</div><div class="section-content"><p>I’m interested in working with people building useful AI products and dependable systems.</p><div class="hero-links"><a class="primary-link" href="mailto:${esc(profile.email)}">Get in touch <span aria-hidden="true">↗</span></a><a href="/resume/">Read my résumé <span aria-hidden="true">↗</span></a><a href="/blog/">All posts <span aria-hidden="true">→</span></a></div></div></footer>
       </article>`
     });
