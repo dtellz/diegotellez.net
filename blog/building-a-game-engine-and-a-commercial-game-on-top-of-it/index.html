@@ -6,10 +6,10 @@
   <meta name="theme-color" content="#111313">
   <meta name="color-scheme" content="dark light">
   <title>Building a game engine and a commercial game on top of it - Diego Téllez</title>
-  <meta name="description" content="Building Echoes of the Cove solo: a 2D action RPG and its purpose-built C# engine, from system ownership and save restoration to profiling and commercial delivery.">
+  <meta name="description" content="Building a 2D action RPG and its purpose-built game engine, from system ownership and save restoration to profiling and commercial delivery.">
   <link rel="canonical" href="https://diegotellez.net/blog/building-a-game-engine-and-a-commercial-game-on-top-of-it/">
   <meta property="og:title" content="Building a game engine and a commercial game on top of it - Diego Téllez">
-  <meta property="og:description" content="Building Echoes of the Cove solo: a 2D action RPG and its purpose-built C# engine, from system ownership and save restoration to profiling and commercial delivery.">
+  <meta property="og:description" content="Building a 2D action RPG and its purpose-built game engine, from system ownership and save restoration to profiling and commercial delivery.">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Diego Téllez">
   <meta property="og:url" content="https://diegotellez.net/blog/building-a-game-engine-and-a-commercial-game-on-top-of-it/">
@@ -22,7 +22,7 @@
   <meta property="og:image:alt" content="Echoes of the Cove running in the harbor with the in-game performance profiler enabled.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Building a game engine and a commercial game on top of it - Diego Téllez">
-  <meta name="twitter:description" content="Building Echoes of the Cove solo: a 2D action RPG and its purpose-built C# engine, from system ownership and save restoration to profiling and commercial delivery.">
+  <meta name="twitter:description" content="Building a 2D action RPG and its purpose-built game engine, from system ownership and save restoration to profiling and commercial delivery.">
   <meta name="twitter:image" content="https://diegotellez.net/assets/images/social/harbor-profile-02-v1.jpg">
   <meta name="twitter:image:alt" content="Echoes of the Cove running in the harbor with the in-game performance profiler enabled.">
   <link rel="icon" href="/assets/favicon.ico?v=2" sizes="16x16 32x32 48x48" type="image/x-icon">
@@ -32,7 +32,7 @@
   <link rel="alternate" type="application/json" href="/.well-known/profile.json" title="Structured professional profile">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="Machine-readable profile">
   <script>try{const theme=localStorage.getItem('dt-theme');if(theme==='light'||theme==='dark')document.documentElement.dataset.theme=theme;}catch{}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Building a game engine and a commercial game on top of it","description":"Building Echoes of the Cove solo: a 2D action RPG and its purpose-built C# engine, from system ownership and save restoration to profiling and commercial delivery.","datePublished":"2026-11-12","dateModified":"2026-11-12","author":{"@type":"Person","name":"Diego Téllez Barrero","url":"https://diegotellez.net"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://diegotellez.net/blog/building-a-game-engine-and-a-commercial-game-on-top-of-it/"},"url":"https://diegotellez.net/blog/building-a-game-engine-and-a-commercial-game-on-top-of-it/","image":["https://diegotellez.net/assets/images/social/harbor-profile-02-v1.jpg"],"inLanguage":"en","wordCount":1040}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Building a game engine and a commercial game on top of it","description":"Building a 2D action RPG and its purpose-built game engine, from system ownership and save restoration to profiling and commercial delivery.","datePublished":"2026-11-12","dateModified":"2026-11-12","author":{"@type":"Person","name":"Diego Téllez Barrero","url":"https://diegotellez.net"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://diegotellez.net/blog/building-a-game-engine-and-a-commercial-game-on-top-of-it/"},"url":"https://diegotellez.net/blog/building-a-game-engine-and-a-commercial-game-on-top-of-it/","image":["https://diegotellez.net/assets/images/social/harbor-profile-02-v1.jpg"],"inLanguage":"en","wordCount":1040}</script>
   <script type="module" src="/assets/js/landing.js"></script>
 </head>
 <body>
@@ -56,7 +56,7 @@
         <header class="section-grid post-header"><div class="section-label"><a href="/blog/">← All posts</a></div><div class="section-content">
           <p class="writing-meta"><time datetime="2026-11-12">12 November 2026</time><span aria-hidden="true">/</span><span>4 min read</span></p>
           <h1 id="post-heading">Building a game engine and a commercial game on top of it</h1>
-          <p class="post-deck">Building Echoes of the Cove solo: a 2D action RPG and its purpose-built C# engine, from system ownership and save restoration to profiling and commercial delivery.</p>
+          <p class="post-deck">Building a 2D action RPG and its purpose-built game engine, from system ownership and save restoration to profiling and commercial delivery.</p>
           <p class="post-author">By <a href="/#about" rel="author">Diego Téllez</a></p>
         </div></header>
         <div class="section-grid post-layout"><aside class="post-sidebar"><nav class="post-toc" aria-label="In this post"><p>In this post</p><a href="#engine-boundaries">Engine boundaries</a><a href="#restoring-and-loading-state">Restoring and loading state</a><a href="#measuring-performance">Measuring performance</a><a href="#handling-partial-failure">Handling partial failure</a><a href="#preparing-for-a-commercial-release">Preparing for a commercial release</a><a href="#trade-offs-of-working-solo">Trade-offs of working solo</a></nav></aside><div class="post-prose"><p>I started Echoes of the Cove because I love video games and had always wanted to make one. I also wanted to grow as an engineer by building something large and technically demanding on my own. The result is a 2D action RPG for Steam, still in development, with a purpose-built game engine underneath it.</p>

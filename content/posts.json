@@ -2,7 +2,7 @@
   {
     "slug": "building-a-game-engine-and-a-commercial-game-on-top-of-it",
     "title": "Building a game engine and a commercial game on top of it",
-    "description": "Building Echoes of the Cove solo: a 2D action RPG and its purpose-built C# engine, from system ownership and save restoration to profiling and commercial delivery.",
+    "description": "Building a 2D action RPG and its purpose-built game engine, from system ownership and save restoration to profiling and commercial delivery.",
     "date": "2026-11-12",
     "body": "posts/building-a-game-engine-and-a-commercial-game-on-top-of-it.html",
     "tags": ["Game development", "Engine architecture", "Performance"],
