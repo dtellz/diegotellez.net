@@ -1,27 +1,5 @@
 [
   {
-    "slug": "building-echoes-of-the-cove",
-    "title": "Building Echoes of the Cove: a solo game and its engine",
-    "description": "Building a 2D action RPG for Steam and its purpose-built engine: system ownership, save restoration, performance profiling and the trade-offs of solo development.",
-    "date": "2026-11-12",
-    "body": "posts/building-echoes-of-the-cove.html",
-    "tags": ["Game development", "C#", "MonoGame", "Performance"],
-    "image": {
-      "path": "/assets/images/blog/harbor-profile-02.png",
-      "width": 3456,
-      "height": 2166,
-      "alt": "The in-game profiler showing harbor frame timings, allocations and map-wide entity counts.",
-      "caption": "The in-game profiler showing harbor frame timings, allocations and map-wide entity counts."
-    },
-    "socialImage": {
-      "path": "/assets/images/blog/harbor-profile-02.png",
-      "width": 3456,
-      "height": 2166,
-      "type": "image/png",
-      "alt": "The in-game profiler showing harbor frame timings, allocations and map-wide entity counts."
-    }
-  },
-  {
     "slug": "from-codex-beta-to-ai-native-engineering",
     "title": "From the Codex beta to AI-native engineering",
     "description": "How my work evolved from debugging snippets in a browser to directing agents, building AI applications and taking on larger engineering challenges.",
